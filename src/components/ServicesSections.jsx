@@ -3,7 +3,7 @@ import Section from './Section';
 
 const ServicesSections = ({ sections }) => {
     return (
-        <div className='w-full max-w-full overflow-hidden'>
+        <div className='w-full  overflow-hidden'>
             <Section {...sections.strategy} />
             <Section {...sections.engineering} />
             <Section {...sections.cybersecurity} />

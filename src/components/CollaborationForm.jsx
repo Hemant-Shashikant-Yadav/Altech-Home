@@ -5,7 +5,6 @@ const InputField = ({
   label,
   placeholder,
   type = "text",
-  optional = false,
   value,
   onChange,
   onBlur,
@@ -15,7 +14,7 @@ const InputField = ({
   isDescription = false,
 }) => (
   <div
-    className="flex flex-col w-full lg:w-[40.3125rem]"
+    className="flex flex-col w-full lg:w-[40.3125rem] mt-[1.5rem] md:mt-[3.25rem]"
     style={{
       height: isDescription ? "auto" : "6.1875rem",
       paddingBottom: "1.0625rem",
@@ -23,7 +22,6 @@ const InputField = ({
       alignItems: "center",
       flexShrink: 0,
     }}
-    className="mt-[1.5rem] md:mt-[3.25rem]"
   >
     <label
       style={{

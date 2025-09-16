@@ -55,7 +55,7 @@ const AnimatedHeader = () => {
         }}
       >
         <AnimatedText
-          className="text-[3rem] md:text-[4rem] lg:text-[5.1rem]"
+          className="text-[2rem] md:text-[4rem] lg:text-[5.1rem]"
           delay="0ms"
           style={{ color: "#9E9E9E" }}
         >
@@ -63,7 +63,7 @@ const AnimatedHeader = () => {
         </AnimatedText>
 
         <AnimatedText
-          className="text-[3.5rem] md:text-[5rem] lg:text-[6.56rem]"
+          className="text-[2.5rem] md:text-[5rem] lg:text-[6.56rem]"
           delay="500ms"
           style={{ color: "#BBB" }}
         >
@@ -71,7 +71,7 @@ const AnimatedHeader = () => {
         </AnimatedText>
 
         <AnimatedText
-          className="text-[4rem] md:text-[6rem] lg:text-[7.4rem]"
+          className="text-[3rem] md:text-[6rem] lg:text-[7.4rem]"
           delay="1000ms"
           style={{ color: "#FFF" }}
         >

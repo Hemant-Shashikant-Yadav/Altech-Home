@@ -23,7 +23,7 @@ const TestimonialCard1 = ({
         <img
           src={imgSrc}
           alt={`${authorName}, ${authorTitle}`}
-          className="w-[21.76rem] lg:w-[25.08544rem] h-auto object-cover"
+          className="w- h-auto object-cover"
           onError={(e) => {
             e.target.onerror = null;
             e.target.src =
@@ -50,18 +50,9 @@ const TestimonialCard1 = ({
 
         {/* Testimonial Quote */}
         <p
-          className="font-[Montserrat]"
-          style={{
-            marginTop: "2.95rem",
-            color: "#616161",
-            fontSize: "1.1875rem",
-            fontStyle: "normal",
-            fontWeight: 400,
-            lineHeight: "normal",
-            width: "23.30425rem",
-          }}
+          className="font-[Montserrat] mt-[2.95rem] text-[#616161] text-[1rem] sm:text-[1.1875rem] font-normal leading-normal w-full sm:w-[23.30425rem] px-2 sm:px-0"
         >
-          "{quote}"
+          {quote}
         </p>
 
         {/* Author Information */}
@@ -117,16 +108,16 @@ const TestimonialsPage = () => {
   return (
     <div className="font-[Montserrat] antialiased text-gray-900 mt-[5rem] lg:mt-[18rem] mb-[7.08rem]">
       {/* Main Heading */}
-      <div className="mb-[2.4rem]">
-        <h1 className="font-semibold max-w-[58.4375rem] h-[16.8125rem] mx-auto text-5xl lg:text-[4.76488rem] tracking-[0.52413rem] leading-tight ">
-          Helping <span className="text-[#777]">ambitious</span> <br />
-          <span className="text-[#777]">brands</span> bring big <br />
+      <div className="mb-10">
+        <h1 className="font-semibold max-w-4xl mx-auto text-3xl sm:text-4xl md:text-5xl lg:text-7xl tracking-widest leading-tight">
+          Helping <span className="text-gray-500">ambitious</span> <br />
+          <span className="text-gray-500">brands</span> bring big <br />
           ideas to life
         </h1>
       </div>
 
       <div
-        className="flex flex-wrap justify-center mx-auto mt-[3.94rem] lg:mt-[3.94rem]"
+        className="flex flex-wrap justify-center mx-auto mt-4"
         style={{
           columnGap: "1.04rem",
           rowGap: "1.71rem",

@@ -206,7 +206,7 @@ const Footer = () => {
             SiteMap
           </a>
           <span className="text-[0.875rem]">
-            @2025, Altecht. All Rights Reserved.
+            @{new Date().getFullYear()}, Altecht. All Rights Reserved.
           </span>
         </div>
 

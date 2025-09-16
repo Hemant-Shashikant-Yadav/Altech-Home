@@ -5,7 +5,7 @@ const ScalableSolutions = () => {
     const navigate = useNavigate();
 
     return (
-        <div className=" min-h-screen flex items-center justify-center font-sans overflow-hidden box-border">
+        <div className="min-h-screen flex items-center justify-center font-sans overflow-hidden box-border">
             {/* Video Background */}
             <div className="absolute inset-0 w-full h-full">
                 <video

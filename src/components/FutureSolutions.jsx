@@ -48,40 +48,37 @@ const FutureSolutions = () => {
                 <h1 className="leading-none">
                     {/* WE BUILD */}
                     <div
-                        className="block font-semibold whitespace-nowrap"
+                        className="block font-semibold whitespace-nowrap text-[3rem] md:text-[5.9rem] lg:text-[12.67694rem]"
                         style={{
                             fontFamily: "Montserrat",
                             fontWeight: 600,
                             lineHeight: "normal"
                         }}
-                        className="text-[3rem] md:text-[5.9rem] lg:text-[12.67694rem]"
                     >
                         {renderAnimatedText("WE BUILD", 0)}
                     </div>
 
                     {/* FUTURE-READY */}
                     <div
-                        className="block font-semibold whitespace-nowrap"
+                        className="block font-semibold whitespace-nowrap text-[2.4rem] md:text-[4.8rem] lg:text-[10rem]"
                         style={{
                             fontFamily: "Montserrat",
                             fontWeight: 600,
                             lineHeight: "normal"
                         }}
-                        className="text-[2.4rem] md:text-[4.8rem] lg:text-[10rem]"
                     >
                         {renderAnimatedText("FUTURE-READY", 8)} {/* Start after "WE BUILD" */}
                     </div>
 
                     {/* SOLUTIONS */}
                     <div
-                        className="block font-semibold whitespace-nowrap"
+                        className="block font-semibold whitespace-nowrap text-[3rem] md:text-[5.8rem] lg:text-[12.67694rem]"
                         style={{
                             fontFamily: "Montserrat",
                             // fontSize: "clamp(1.8rem, 8vw + 1rem, 15rem)",
                             fontWeight: 600,
                             lineHeight: "normal"
                         }}
-                        className="text-[3rem] md:text-[5.8rem] lg:text-[12.67694rem]"
                     >
                         {renderAnimatedText("SOLUTIONS", 20)} {/* Start after "FUTURE-READY" */}
                     </div>
