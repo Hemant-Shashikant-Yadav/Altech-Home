@@ -55,7 +55,7 @@ const Navbar = () => {
         fontFamily: "Montserrat, sans-serif",
       }}
     >
-      <div className="grid grid-cols-3 items-center text-white h-[4.625rem] w-full">
+      <div className="flex justify-between items-center text-white h-[4.625rem] w-full">
         {/* Logo */}
         <motion.div
           whileHover={{
@@ -75,8 +75,12 @@ const Navbar = () => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               style={{
-                width: "3.6205rem",
-                height: "3.3169rem",
+                width: "2.8rem", // Reduced from 3.6205rem
+                height: "2.6rem", // Reduced from 3.3169rem
+                "@media (min-width: 768px)": {
+                  width: "3.6205rem",
+                  height: "3.3169rem",
+                },
               }}
             >
               <path
@@ -88,14 +92,19 @@ const Navbar = () => {
               style={{
                 fontFamily: "Audiowide, sans-serif",
                 fontWeight: "400",
-                fontSize: "2.027rem",
+                fontSize: "1.6rem", // Reduced from 2.027rem
                 lineHeight: "100%",
                 letterSpacing: "0.31rem",
-                width: "11.3125rem",
+                width: "auto",
                 height: "2.5625rem",
                 marginTop: "1.37rem",
-                marginLeft: "1.94rem",
+                marginLeft: "1rem", // Reduced from 1.94rem
                 color: "white",
+                "@media (min-width: 768px)": {
+                  fontSize: "2.027rem",
+                  marginLeft: "1.94rem",
+                  width: "11.3125rem",
+                },
               }}
             >
               ALTECHT
@@ -104,10 +113,7 @@ const Navbar = () => {
         </motion.div>
 
         {/* Desktop Navigation Pills - Centered */}
-        <div
-          className="hidden lg:flex items-center justify-center"
-          style={{ gap: "0.72rem", top: "1.38rem" }}
-        >
+        <div className="hidden lg:flex items-center justify-center flex-1">
           {menuItems.map((item) => (
             <motion.div
               key={item.path}
@@ -158,10 +164,7 @@ const Navbar = () => {
         </div>
 
         {/* Medium Screen Navigation Pills - Centered */}
-        <div
-          className="hidden md:flex lg:hidden items-center justify-center"
-          style={{ gap: "0.5rem" }}
-        >
+        <div className="hidden md:flex lg:hidden items-center justify-center flex-1">
           {menuItems.slice(0, 4).map((item) => (
             <motion.div
               key={item.path}
@@ -201,14 +204,14 @@ const Navbar = () => {
                   }
                 }}
               >
-{item.label}
+                {item.label}
               </Link>
             </motion.div>
           ))}
         </div>
 
         {/* Right side */}
-        <div className="flex items-center justify-end">
+        <div className="flex items-center">
           {/* Desktop CTA - Let's Talk Button */}
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -268,15 +271,15 @@ const Navbar = () => {
                 isMobileMenuOpen ? { rotate: 0, y: 0 } : { rotate: 0, y: -4 }
               }
               transition={{ duration: 0.4 }}
-              className="absolute w-6 sm:w-8 h-0.5 sm:h-1 bg-white rounded"
+              className="absolute w-7 sm:w-8 h-0.5 sm:h-1 bg-white rounded"
             />
             {/* Crossing line - rotates to cross the horizontal line */}
             <motion.span
               animate={
-                isMobileMenuOpen ? { rotate: 90, y: 0 } : { rotate: 0, y: 4 }
+                isMobileMenuOpen ? { rotate: 45, y: 0 } : { rotate: 0, y: 4 }
               }
               transition={{ duration: 0.4 }}
-              className="absolute w-6 sm:w-8 h-0.5 sm:h-1 bg-white rounded"
+              className="absolute w-7 sm:w-8 h-0.5 sm:h-1 bg-white rounded"
             />
           </button>
         </div>

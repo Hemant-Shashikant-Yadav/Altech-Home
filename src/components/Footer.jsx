@@ -135,7 +135,7 @@ const Footer = () => {
           <h2 className="text-[1.5rem] sm:text-[2rem] font-medium">
             Hello@Altecht.com
           </h2>
-          <button aria-label="Send email" className="self-end mr-5">
+          <button aria-label="Send email" className="self-end mr-17">
             <div className="w-[3.5rem] h-[1.6rem] relative">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -180,6 +180,7 @@ const Footer = () => {
               key={link.name}
               to={link.path}
               className="text-[1rem] font-medium hover:opacity-75 transition-opacity"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               {link.name}
             </Link>
@@ -189,6 +190,7 @@ const Footer = () => {
               key={link.name}
               to={link.path}
               className="text-[1rem] font-medium hover:opacity-75 transition-opacity"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               {link.name}
             </Link>
@@ -315,6 +317,7 @@ const Footer = () => {
                       key={link.name}
                       to={link.path}
                       className="text-[1.5rem] font-medium leading-normal hover:opacity-75 transition-opacity"
+                      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                     >
                       {link.name}
                     </Link>
@@ -326,6 +329,7 @@ const Footer = () => {
                       key={link.name}
                       to={link.path}
                       className="text-[1.5rem] font-medium leading-normal hover:opacity-75 transition-opacity"
+                      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                     >
                       {link.name}
                     </Link>

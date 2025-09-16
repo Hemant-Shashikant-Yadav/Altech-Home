@@ -22,8 +22,8 @@ const InputField = ({
       justifyContent: "center",
       alignItems: "center",
       flexShrink: 0,
-      marginTop: "3.25rem",
     }}
+    className="mt-[1.5rem] md:mt-[3.25rem]"
   >
     <label
       style={{
