@@ -97,7 +97,7 @@ const CareersPage = () => {
         <div className="my-20 lg:my-28 bg-white font-sans antialiased text-black">
             <div className="mt-44">
                 <h1 className="text-6xl md:text-7xl font-bold tracking-tighter" style={{ marginBottom: '4.44rem' }}>
-                    Be a part of Altech
+                    Be a part of Altecht
                 </h1>
 
                 <div className="w-full">
