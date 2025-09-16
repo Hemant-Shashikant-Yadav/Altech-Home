@@ -155,10 +155,10 @@ const CollaborationForm = () => {
   };
 
   return (
-    <div className="mb-40 lg:mb-[28.4rem] px-4 lg:px-0">
+    <div className="mb-40 lg:mb-[28.4rem] px-4 lg:px-0 w-fulll">
       {/* Main heading */}
       <h2
-        className="text-[3rem] lg:text-[6rem] font-semibold mt-[8rem] lg:mt-[9.62rem] mb-6 lg:mb-[3.12rem]"
+        className="text-2xl lg:text-9xl font-semibold mt-32 lg:mt-40 mb-6 lg:mb-12"
         style={{ fontFamily: "Montserrat", color: "#000" }}
       >
         Collaboration

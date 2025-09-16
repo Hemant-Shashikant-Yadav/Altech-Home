@@ -13,13 +13,10 @@ const FutureSolutions = () => {
             return (
                 <span
                     key={index}
-                    className={`transition-colors duration-500 ease-in-out ${inView ? 'text-black' : 'text-gray-400'
-                        }`}
+                    className={`transition-colors duration-500 ease-in-out ${inView ? 'text-black' : 'text-gray-400'} inline-block leading-none`}
                     style={{
                         transitionDelay: inView ? `${delay}s` : '0s',
                         letterSpacing: '0',
-                        display: 'inline-block',
-                        lineHeight: '1'
                     }}
                 >
                     {char === ' ' ? '\u00A0' : char} {/* Non-breaking space for spaces */}
@@ -29,57 +26,21 @@ const FutureSolutions = () => {
     };
 
     return (
-        <div
-            className="bg-white flex items-center justify-center w-full "
-            style={{
-                maxWidth: "90rem",
-                height: "clamp(30rem, 65vw + 20rem, 82.8125rem)",
-                flexShrink: 0,
-                margin: "0 auto"
-            }}
-        >
-            <div
-                ref={ref}
-                style={{
-                    width: "82.5rem",
-                    maxWidth: "100%"
-                }}
-            >
+        <div className="bg-white flex items-center justify-center w-full  h-[clamp(30rem,65vw+20rem,82.8125rem)] flex-shrink-0 mx-auto">
+            <div ref={ref} className="w-[82.5rem] max-w-full">
                 <h1 className="leading-none">
                     {/* WE BUILD */}
-                    <div
-                        className="block font-semibold whitespace-nowrap text-[3rem] md:text-[5.9rem] lg:text-[12.67694rem]"
-                        style={{
-                            fontFamily: "Montserrat",
-                            fontWeight: 600,
-                            lineHeight: "normal"
-                        }}
-                    >
+                    <div className="block font-semibold whitespace-nowrap text-[2rem] md:text-[5.9rem] lg:text-[12.67694rem] font-montserrat leading-normal">
                         {renderAnimatedText("WE BUILD", 0)}
                     </div>
 
                     {/* FUTURE-READY */}
-                    <div
-                        className="block font-semibold whitespace-nowrap text-[2.4rem] md:text-[4.8rem] lg:text-[10rem]"
-                        style={{
-                            fontFamily: "Montserrat",
-                            fontWeight: 600,
-                            lineHeight: "normal"
-                        }}
-                    >
+                    <div className="block font-semibold whitespace-nowrap text-[2rem] md:text-[4.8rem] lg:text-[10rem] font-montserrat leading-normal">
                         {renderAnimatedText("FUTURE-READY", 8)} {/* Start after "WE BUILD" */}
                     </div>
 
                     {/* SOLUTIONS */}
-                    <div
-                        className="block font-semibold whitespace-nowrap text-[3rem] md:text-[5.8rem] lg:text-[12.67694rem]"
-                        style={{
-                            fontFamily: "Montserrat",
-                            // fontSize: "clamp(1.8rem, 8vw + 1rem, 15rem)",
-                            fontWeight: 600,
-                            lineHeight: "normal"
-                        }}
-                    >
+                    <div className="block font-semibold whitespace-nowrap text-[2rem] md:text-[5.8rem] lg:text-[12.67694rem] font-montserrat leading-normal">
                         {renderAnimatedText("SOLUTIONS", 20)} {/* Start after "FUTURE-READY" */}
                     </div>
                 </h1>

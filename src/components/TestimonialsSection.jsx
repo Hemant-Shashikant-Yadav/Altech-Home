@@ -34,12 +34,12 @@ const testimonials = [
 ];
 
 const TestimonialCard = ({ image, quote, client, ceoName, ceoDesignation }) => (
-    <div className="w-[22.793rem] md:h-[36.611rem] flex-shrink-0 bg-white rounded-md"
+    <div className="w md:h-[36.611rem] flex-shrink-0 bg-white rounded-md"
          style={{
              boxShadow: "4.721px 9.441px 18.883px 0 rgba(0, 0, 0, 0.25)"
          }}>
         <div className="flex flex-col items-center">
-            <div className=" h-[17.184rem] w-[19.938rem]  mt-[1rem] overflow-hidden flex-shrink-0 bg-gray-100">
+            <div className=" h-[17.184rem] w-[19.938rem]  mt-[1rem] overflow-hidden flex-shrink-0 bg-gray-100 px-5">
                 <img
                     src={encodeURI(image)}
                     alt={client}
