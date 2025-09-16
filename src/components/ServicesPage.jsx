@@ -40,7 +40,7 @@ const services = [
 
 const ServiceCard = ({ imgSrc, altText, title, description }) => (
   <div
-    className="flex flex-col items-center bg-white"
+    className="relative flex flex-col items-center bg-white transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
     style={{
       width: "clamp(18rem, 6vw + 16rem, 24.125rem)",
       height: "clamp(28.9rem, 9.6vw + 25rem, 38.75rem)",
@@ -50,6 +50,7 @@ const ServiceCard = ({ imgSrc, altText, title, description }) => (
       paddingTop: "clamp(1.1rem, 0.4vw + 1rem, 1.5rem)",
       paddingLeft: "clamp(1.1rem, 0.4vw + 1rem, 1.5rem)",
       paddingRight: "clamp(1.1rem, 0.4vw + 1rem, 1.5rem)",
+      zIndex: 1,
     }}
   >
     <img
@@ -107,12 +108,13 @@ const ServicesPage = () => {
 
   return (
     <div
-      className="bg-white font-sans antialiased text-gray-900 w-full  pb-16 sm:pb-12 md:pb-10 lg:pb-8 xl:pb-6"
+      className="bg-white font-sans antialiased text-gray-900 w-full pb-16 sm:pb-12 md:pb-10 lg:pb-8 xl:pb-6 overflow-visible"
       style={{
         maxWidth: "90rem",
         minHeight: "97.8125rem",
         flexShrink: 0,
         margin: "0 auto",
+        padding: "0 1rem",
       }}
     >
       {/* Heading */}
@@ -132,11 +134,11 @@ const ServicesPage = () => {
 
       {/* Layout: column by default and on tablet / iPad Pro,
           switch to side-by-side only at xl (>=1280px) */}
-      <div className="flex flex-col xl:flex-row xl:items-stretch justify-between">
+      <div className="flex flex-col xl:flex-row xl:items-stretch justify-between isolate">
         {/* Cybersecurity card (separate left column when xl, otherwise stacks) */}
-        <div className="flex justify-center xl:self-end mb-8 sm:mb-10 md:mb-12 lg:mb-16 xl:mb-0">
+        <div className="flex justify-center xl:self-end mb-8 sm:mb-10 md:mb-12 lg:mb-16 xl:mb-0 p-8">
           <div
-            className="flex flex-col items-center bg-white"
+            className="relative flex flex-col items-center bg-white transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
             style={{
               width: "clamp(18rem, 6vw + 16rem, 24.125rem)",
               height: "clamp(28.9rem, 9.6vw + 25rem, 38.75rem)",
@@ -146,6 +148,7 @@ const ServicesPage = () => {
               paddingTop: "clamp(1.1rem, 0.4vw + 1rem, 1.5rem)",
               paddingLeft: "clamp(1.1rem, 0.4vw + 1rem, 1.5rem)",
               paddingRight: "clamp(1.1rem, 0.4vw + 1rem, 1.5rem)",
+              zIndex: 1,
             }}
           >
             <img
@@ -202,7 +205,7 @@ const ServicesPage = () => {
         <div className="hidden xl:block w-[6.25rem]" />
 
         {/* Grid of 2x2 (other 4) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-[1.5rem] sm:gap-[2.5rem] xl:gap-x-[1.4375rem] xl:gap-y-[1.625rem] place-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-[1.5rem] sm:gap-[2.5rem] xl:gap-x-[1.4375rem] xl:gap-y-[1.625rem] place-items-center p-8">
           {rest.map((service, idx) => (
             <ServiceCard key={idx} {...service} />
           ))}

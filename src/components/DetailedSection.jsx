@@ -5,6 +5,11 @@ const DetailedSection = ({ title, image, paragraph1, paragraph2, paragraph3, sam
     const [expanded, setExpanded] = useState(false);
     const navigate = useNavigate();
 
+    const handleDiscussClick = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        navigate('/collaboration');
+    };
+
     return (
         <div className="bg-black shadow-lg py-8 lg:py-16">
             <div className=" w-full max-w-full px-4">
@@ -99,7 +104,7 @@ const DetailedSection = ({ title, image, paragraph1, paragraph2, paragraph3, sam
                             </p>
                             <button
                                 className="flex justify-center items-center gap-3 w-[16rem] md:w-[17rem] lg:w-[18.5rem] h-[3.5rem] md:h-[3.75rem] lg:h-[4rem] px-4 rounded-[3.5625rem] border-2 border-white bg-[#1B1B1B] cursor-pointer mt-6 md:mt-8 lg:mt-[2.13rem] transition-all duration-300 hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white"
-                                onClick={() => navigate('/collaboration')}
+                                onClick={handleDiscussClick}
                             >
                                 <span
                                     className="text-white font-montserrat text-[1rem] md:text-[1.125rem] lg:text-[1.24663rem] font-semibold whitespace-nowrap"
