@@ -113,54 +113,58 @@ const Navbar = () => {
         </motion.div>
 
         {/* Desktop Navigation Pills - Centered */}
-        <div className="hidden lg:flex items-center justify-center flex-1 gap-[0.72rem]">
-          {menuItems.map((item) => (
-            <motion.div
-              key={item.path}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link
-                to={item.path}
-                className="transition-all duration-300 whitespace-nowrap"
-                style={{
-                  fontFamily: "Montserrat, sans-serif",
-                  fontSize: "0.96069rem",
-                  fontWeight: "600",
-                  width: "6.00rem",
-                  height: "1.94rem",
-                  borderRadius: "2.75rem",
-                  border: isActivePath(item.path) ? "0.06rem solid #FFF" : "0.06rem solid #898989",
-                  background: isActivePath(item.path) ? "#FFF" : "#1B1B1B",
-                  color: isActivePath(item.path) ? "#1B1B1B" : "#FFF",
-                  paddingTop: "0.50rem",
-                  paddingBottom: "0.50rem",
-                  paddingLeft: "0.50rem",
-                  paddingRight: "0.50rem",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  textDecoration: "none",
-                }}
-                onMouseEnter={(e) => {
-                  if (!isActivePath(item.path)) {
-                    e.target.style.background = "#FFF";
-                    e.target.style.color = "#1B1B1B";
-                    e.target.style.border = "0.06rem solid #FFF";
-                  }
-                }}
-                onMouseLeave={(e) => {
-                  if (!isActivePath(item.path)) {
-                    e.target.style.background = "#1B1B1B";
-                    e.target.style.color = "#FFF";
-                    e.target.style.border = "0.06rem solid #898989";
-                  }
-                }}
+        <div className="hidden lg:grid lg:grid-cols-[1fr_auto_1fr] items-center w-full">
+          <div className=""></div> {/* Left spacer */}
+          <div className="grid grid-flow-col gap-[0.72rem] auto-cols-max justify-center">
+            {menuItems.map((item) => (
+              <motion.div
+                key={item.path}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                {item.label}
-              </Link>
-            </motion.div>
-          ))}
+                <Link
+                  to={item.path}
+                  className="transition-all duration-300 whitespace-nowrap"
+                  style={{
+                    fontFamily: "Montserrat, sans-serif",
+                    fontSize: "0.96069rem",
+                    fontWeight: "600",
+                    width: "6.00rem",
+                    height: "1.94rem",
+                    borderRadius: "2.75rem",
+                    border: isActivePath(item.path) ? "0.06rem solid #FFF" : "0.06rem solid #898989",
+                    background: isActivePath(item.path) ? "#FFF" : "#1B1B1B",
+                    color: isActivePath(item.path) ? "#1B1B1B" : "#FFF",
+                    paddingTop: "0.50rem",
+                    paddingBottom: "0.50rem",
+                    paddingLeft: "0.50rem",
+                    paddingRight: "0.50rem",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    textDecoration: "none",
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!isActivePath(item.path)) {
+                      e.target.style.background = "#FFF";
+                      e.target.style.color = "#1B1B1B";
+                      e.target.style.border = "0.06rem solid #FFF";
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!isActivePath(item.path)) {
+                      e.target.style.background = "#1B1B1B";
+                      e.target.style.color = "#FFF";
+                      e.target.style.border = "0.06rem solid #898989";
+                    }
+                  }}
+                >
+                  {item.label}
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+          <div className=""></div> {/* Right spacer */}
         </div>
 
         {/* Medium Screen Navigation Pills - Centered */}

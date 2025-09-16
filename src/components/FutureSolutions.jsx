@@ -13,9 +13,8 @@ const FutureSolutions = () => {
             return (
                 <span
                     key={index}
-                    className={`transition-colors duration-500 ease-in-out ${
-                        inView ? 'text-black' : 'text-gray-400'
-                    }`}
+                    className={`transition-colors duration-500 ease-in-out ${inView ? 'text-black' : 'text-gray-400'
+                        }`}
                     style={{
                         transitionDelay: inView ? `${delay}s` : '0s',
                         letterSpacing: '0',
@@ -30,7 +29,7 @@ const FutureSolutions = () => {
     };
 
     return (
-        <div 
+        <div
             className="bg-white flex items-center justify-center w-full "
             style={{
                 maxWidth: "90rem",
@@ -39,7 +38,7 @@ const FutureSolutions = () => {
                 margin: "0 auto"
             }}
         >
-            <div 
+            <div
                 ref={ref}
                 style={{
                     width: "82.5rem",
@@ -48,43 +47,44 @@ const FutureSolutions = () => {
             >
                 <h1 className="leading-none">
                     {/* WE BUILD */}
-                    <span
+                    <div
                         className="block font-semibold whitespace-nowrap"
                         style={{
                             fontFamily: "Montserrat",
-                            fontSize: "clamp(1.8rem, 8vw + 1rem, 12.67694rem)",
                             fontWeight: 600,
                             lineHeight: "normal"
                         }}
+                        className="text-[3rem] md:text-[5.9rem] lg:text-[12.67694rem]"
                     >
                         {renderAnimatedText("WE BUILD", 0)}
-                    </span>
+                    </div>
 
                     {/* FUTURE-READY */}
-                    <span
+                    <div
                         className="block font-semibold whitespace-nowrap"
                         style={{
                             fontFamily: "Montserrat",
-                            fontSize: "clamp(1.4rem, 6.35vw + 0.8rem, 10.0625rem)",
                             fontWeight: 600,
                             lineHeight: "normal"
                         }}
+                        className="text-[2.5rem] md:text-[4.8rem] lg:text-[10rem]"
                     >
                         {renderAnimatedText("FUTURE-READY", 8)} {/* Start after "WE BUILD" */}
-                    </span>
+                    </div>
 
                     {/* SOLUTIONS */}
-                    <span
+                    <div
                         className="block font-semibold whitespace-nowrap"
                         style={{
                             fontFamily: "Montserrat",
-                            fontSize: "clamp(1.8rem, 8vw + 1rem, 12.67694rem)",
+                            // fontSize: "clamp(1.8rem, 8vw + 1rem, 15rem)",
                             fontWeight: 600,
                             lineHeight: "normal"
                         }}
+                        className="text-[3rem] md:text-[5.8rem] lg:text-[12.67694rem]"
                     >
                         {renderAnimatedText("SOLUTIONS", 20)} {/* Start after "FUTURE-READY" */}
-                    </span>
+                    </div>
                 </h1>
             </div>
         </div>
