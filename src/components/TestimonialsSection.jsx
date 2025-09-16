@@ -25,7 +25,7 @@ const testimonials = [
         ceoDesignation: 'Product Lead, Off-Thrd'
     },
     {
-        image: '/All Images Landing page Altecht/c3.png',
+        image: '/All Images Landing page Altecht/c4.png',
         quote: '“Their tech made farming smarter—easy access to tools, data, and services for real impact on the ground.”',
         client: 'Smart Kisaan',
         ceoName: 'Maneesh Pahuja',
