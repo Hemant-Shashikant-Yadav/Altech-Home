@@ -113,7 +113,7 @@ const Navbar = () => {
         </motion.div>
 
         {/* Desktop Navigation Pills - Centered */}
-        <div className="hidden lg:flex items-center justify-center flex-1">
+        <div className="hidden lg:flex items-center justify-center flex-1 gap-[0.72rem]">
           {menuItems.map((item) => (
             <motion.div
               key={item.path}

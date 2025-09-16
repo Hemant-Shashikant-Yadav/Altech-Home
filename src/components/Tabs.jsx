@@ -55,30 +55,29 @@ const Tabs = ({ activeTab, onTabChange }) => {
                 <div
                     className="
                         flex flex-wrap lg:flex-nowrap justify-start items-center
-                        mb-8
+                        gap-2 sm:gap-3 md:gap-4 lg:gap-[1.31rem]
+                        mb-6 sm:mb-7 md:mb-8
+                        px-2 sm:px-0
                     "
-                    style={{
-                        gap: '1.31rem',
-                    }}
                 >
                     {tabs.map((tab) => (
                         <button
                             key={tab.id}
                             onClick={() => onTabChange(tab.id)}
-                            className="transition-colors duration-300 cursor-pointer whitespace-nowrap"
-                            style={{
-                                color: activeTab === tab.id ? '#FFF' : '#8A8A8A',
-                                fontFamily: 'Montserrat',
-                                fontSize: '1.24663rem',
-                                fontStyle: 'normal',
-                                fontWeight: '600',
-                                lineHeight: 'normal',
-                                padding: '0.625rem 1.35rem',
-                                borderRadius: '3.5625rem',
-                                border: '2px solid #C8C8C8',
-                                background: activeTab === tab.id ? '#1d1d1d' : '#FFF',
-                                minWidth: 'max-content',
-                            }}
+                            className={`
+                                transition-all duration-300 cursor-pointer whitespace-nowrap
+                                font-montserrat font-semibold
+                                text-[0.875rem] sm:text-[1rem] md:text-[1.125rem] lg:text-[1.24663rem]
+                                px-3 sm:px-4 md:px-5 lg:px-[1.35rem]
+                                py-2 sm:py-2.5 md:py-2.5 lg:py-[0.625rem]
+                                rounded-[3.5625rem]
+                                border-2
+                                min-w-max
+                                ${activeTab === tab.id
+                                    ? 'text-white bg-[#1d1d1d] border-[#C8C8C8]'
+                                    : 'text-[#8A8A8A] bg-white border-[#C8C8C8] hover:bg-[#f5f5f5]'
+                                }
+                            `}
                         >
                             {tab.name}
                         </button>
@@ -92,17 +91,8 @@ const Tabs = ({ activeTab, onTabChange }) => {
                     }} />
                 </div>
                 <div className="">
-                    <h2 
-                        style={{
-                            width: '52rem',
-                            color: '#000',
-                            fontFamily: 'Montserrat',
-                            fontSize: '3rem',
-                            fontStyle: 'normal',
-                            fontWeight: '600',
-                            lineHeight: 'normal',
-                        }}
-                        className="mb-[6.62rem]"
+                    <h2
+                        className="text-[1.75rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] font-montserrat font-semibold text-black leading-tight md:leading-normal mb-8 md:mb-12 lg:mb-[6.62rem] max-w-full md:max-w-[40rem] lg:max-w-[52rem]"
                     >
                         {tabs.find(tab => tab.id === activeTab)?.title || ''}
                     </h2>

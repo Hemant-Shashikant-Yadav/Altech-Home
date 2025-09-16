@@ -71,7 +71,7 @@ const KnowMorePage = () => {
 
   return (
     <>
-      <Container className="pt-20 md:pt-36">
+      <Container className="pt-25 md:pt-36">
         <Tabs activeTab={activeTab} onTabChange={setActiveTab} />
       </Container>
       <div className="bg-black">
