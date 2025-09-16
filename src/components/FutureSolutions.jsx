@@ -67,7 +67,7 @@ const FutureSolutions = () => {
                             fontWeight: 600,
                             lineHeight: "normal"
                         }}
-                        className="text-[2.5rem] md:text-[4.8rem] lg:text-[10rem]"
+                        className="text-[2.4rem] md:text-[4.8rem] lg:text-[10rem]"
                     >
                         {renderAnimatedText("FUTURE-READY", 8)} {/* Start after "WE BUILD" */}
                     </div>
