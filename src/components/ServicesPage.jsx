@@ -25,7 +25,7 @@ const services = [
   {
     imgSrc: "All Images Landing page Altecht/Rectangle 71.png",
     altText: "Custom Development",
-    title: "Customer Development",
+    title: "Custom Development",
     description:
       "We craft tailor-made software solutions aligned with your business goals, driving efficiency, scalability, and growth.",
   },
