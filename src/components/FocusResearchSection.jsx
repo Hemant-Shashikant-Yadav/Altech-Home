@@ -1,8 +1,8 @@
 import React from 'react';
 
 const FocusResearchSection = () => (
-    <div className="bg-black shadow-lg p-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+    <div className="bg-black shadow-lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 pb-10">
             <div>
                 <h2 className="text-4xl font-bold text-white mb-4">Focus -</h2>
                 {/* Content for Focus section goes here */}

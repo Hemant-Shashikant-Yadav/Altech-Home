@@ -11,9 +11,9 @@ const DetailedSection = ({ title, image, paragraph1, paragraph2, paragraph3, sam
     };
 
     return (
-        <div className="bg-black shadow-lg py-8 lg:py-16">
+        <div className="bg-black shadow-lg pb-10py-8 lg:py-16">
             <div className=" w-full max-w-full px-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 pb-10 items-center">
                     {/* Left Column - Image */}
                     <div className="flex items-center justify-center">
                         <img

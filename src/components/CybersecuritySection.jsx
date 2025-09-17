@@ -1,10 +1,10 @@
 import React from 'react';
 
 const CybersecuritySection = () => (
-    <div className="bg-black shadow-lg p-16">
+    <div className="bg-black shadow-lg">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
             <div>
-                <h2 className="text-4xl font-bold text-white mb-4">Cybersecurity -</h2>
+                <h2 className="text-3xl font-bold text-white mb-4">Cybersecurity -</h2>
             </div>
             <div>
                 <h3 className="text-2xl font-bold text-white mb-4">Threat Detection & Response</h3>
@@ -27,7 +27,6 @@ const CybersecuritySection = () => (
                     <li>Network Protection</li>
                 </ul>
             </div>
-            <div></div>
             <div>
                 <h3 className="text-2xl font-bold text-white mb-4">Cloud Security</h3>
                 <ul className="text-gray-400 space-y-2">

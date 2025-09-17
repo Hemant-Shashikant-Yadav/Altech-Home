@@ -1,7 +1,7 @@
 import React from 'react';
 
 const TalentAcquisitionSection = () => (
-    <div className="bg-black shadow-lg p-16">
+    <div className="bg-black shadow-lg">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
             <div>
                 <h2 className="text-4xl font-bold text-white mb-4">Talent Acquisition -</h2>
