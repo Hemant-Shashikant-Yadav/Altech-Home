@@ -53,6 +53,7 @@ const CollaborationSection = () => {
             lg:w-[50rem] lg:h-[5rem] lg:p-[0.625rem] lg:gap-[1.125rem] lg:rounded-[3rem] lg:mt-12
             xl:w-[82.375rem] xl:h-[6.3125rem] xl:p-[0.625rem] xl:gap-[1.25rem] xl:rounded-[3.5625rem] xl:mt-[4.95rem]
             border-2 border-[#BADEFF] bg-[#007AEC] cursor-pointer
+            hover:bg-black hover:drop-shadow-[0_0_0.5rem_rgba(0,0,0,0.5)] hover:border-gray-700
           "
           onClick={() => navigate("/collaboration")}
         >
