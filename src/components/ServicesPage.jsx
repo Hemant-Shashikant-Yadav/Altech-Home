@@ -205,7 +205,7 @@ const ServicesPage = () => {
         <div className="hidden xl:block w-[6.25rem]" />
 
         {/* Grid of 2x2 (other 4) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-[1.5rem] sm:gap-[2.5rem] xl:gap-x-[1.4375rem] xl:gap-y-[1.625rem] place-items-center p-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-[1.5rem] sm:gap-[2.5rem] xl:gap-x-[1.4375rem] xl:gap-y-[1.625rem] place-items-center ">
           {rest.map((service, idx) => (
             <ServiceCard key={idx} {...service} />
           ))}
