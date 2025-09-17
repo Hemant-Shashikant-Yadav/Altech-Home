@@ -93,7 +93,7 @@ const TestimonialsPage = () => {
       quote:
         "“From planning to booking, Altecht designed an intuitive app that makes event management effortless.”",
       authorName: "Suwannee",
-      authorTitle: "IT Infrastructure Lead, Nutone",
+      authorTitle: "IT Infrastructure Lead, Wedify",
     },
     {
       imgSrc: "All Images Landing page Altecht/c4.png",

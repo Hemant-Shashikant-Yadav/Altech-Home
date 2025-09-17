@@ -63,7 +63,7 @@ const Navbar = () => {
       }`}
       style={{ minHeight: "4.625rem", fontFamily: "Montserrat, sans-serif" }}
     >
-      <div className="flex justify-between items-center text-white h-[4.625rem] w-full">
+      <div className="flex justify-between items-center text-white h-[4.625rem] w-full relative">
         {/* Logo */}
         <motion.div whileTap={{ scale: 0.95 }} className="flex items-center">
           <Link to="/" className="flex items-center hover:opacity-80">
@@ -94,14 +94,13 @@ const Navbar = () => {
         </motion.div>
 
         {/* Desktop Navigation Pills - Centered */}
-        <div className="hidden lg:grid lg:grid-cols-[1fr_auto_1fr] items-center w-full">
-          <div></div>
-          <div className="grid grid-flow-col gap-[0.72rem] auto-cols-max justify-center">
+        <div className="absolute left-1/2 transform -translate-x-1/2 hidden lg:block">
+          <div className="flex gap-[0.72rem]">
             {menuItems.map((item) => (
               <motion.div key={item.path} whileHover={{ scale: 1.05 }}>
                 <Link
                   to={item.path}
-                  className="transition-all duration-300 whitespace-nowrap"
+                  className={`transition-all bg-[#1B1B1B] duration-300 whitespace-nowrap hover:bg-white hover:text-[#1B1B1B] hover:border-white ${isActivePath(item.path) ? 'bg-white text-[#1B1B1B] border-white' : ''} `}
                   style={{
                     fontFamily: "Montserrat, sans-serif",
                     fontSize: "0.96069rem",
@@ -112,8 +111,6 @@ const Navbar = () => {
                     border: isActivePath(item.path)
                       ? "0.06rem solid #FFF"
                       : "0.06rem solid #898989",
-                    background: isActivePath(item.path) ? "#FFF" : "#1B1B1B",
-                    color: isActivePath(item.path) ? "#1B1B1B" : "#FFF",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -124,43 +121,44 @@ const Navbar = () => {
               </motion.div>
             ))}
           </div>
-          <div></div>
         </div>
 
         {/* Medium Screen Pills */}
-        <div className="hidden md:flex lg:hidden items-center justify-center flex-1">
-          {menuItems.map((item) => (
-            <motion.div key={item.path} whileHover={{ scale: 1.05 }}>
-              <Link
-                to={item.path}
-                className="transition-all duration-300 whitespace-nowrap"
-                style={{
-                  fontFamily: "Montserrat, sans-serif",
-                  fontSize: "0.8rem",
-                  fontWeight: "600",
-                  letterSpacing: "0.2rem",
-                  borderRadius: "2rem",
-                  border: isActivePath(item.path)
-                    ? "0.06rem solid #FFF"
-                    : "0.06rem solid #898989",
-                  background: isActivePath(item.path) ? "#FFF" : "#1B1B1B",
-                  color: isActivePath(item.path) ? "#1B1B1B" : "#FFF",
-                  padding: "0.4rem 0.8rem",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                {item.label}
-              </Link>
-            </motion.div>
-          ))}
-        </div>
+        {/* <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex lg:hidden">
+          <div className="flex gap-4">
+            {menuItems.map((item) => (
+              <motion.div key={item.path} whileHover={{ scale: 1.05 }}>
+                <Link
+                  to={item.path}
+                  className="transition-all duration-300 whitespace-nowrap"
+                  style={{
+                    fontFamily: "Montserrat, sans-serif",
+                    fontSize: "0.8rem",
+                    fontWeight: "600",
+                    letterSpacing: "0.2rem",
+                    borderRadius: "2rem",
+                    border: isActivePath(item.path)
+                      ? "0.06rem solid #FFF"
+                      : "0.06rem solid #898989",
+                    background: isActivePath(item.path) ? "#FFF" : "#1B1B1B",
+                    color: isActivePath(item.path) ? "#1B1B1B" : "#FFF",
+                    padding: "0.4rem 0.8rem",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  {item.label}
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div> */}
 
         {/* Right Side */}
         <div className="flex items-center">
           {/* Desktop CTA */}
-          <motion.div className="hidden md:block">
+          <motion.div className="hidden lg:block">
             <Link
               to="/collaboration"
               style={{
@@ -189,7 +187,7 @@ const Navbar = () => {
           {/* Mobile Hamburger */}
           <button
             onClick={handleMenuToggle}
-            className="md:hidden relative w-6 h-6 sm:w-8 sm:h-8 flex flex-col justify-center items-center"
+            className="lg:hidden relative w-6 h-6 sm:w-8 sm:h-8 flex flex-col justify-center items-center"
           >
             <motion.span
               animate={
@@ -220,7 +218,7 @@ const Navbar = () => {
             variants={dropdownVariants}
             className="bg-black text-white border-t border-gray-800"
           >
-            <div className="md:hidden py-4 px-4 space-y-3">
+            <div className="lg:hidden py-4 px-4 space-y-3">
               {menuItems.map((item) => (
                 <motion.div key={item.path} variants={itemVariants}>
                   <Link
