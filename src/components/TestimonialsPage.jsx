@@ -23,7 +23,7 @@ const TestimonialCard1 = ({
         <img
           src={imgSrc}
           alt={`${authorName}, ${authorTitle}`}
-          className="w- h-auto object-cover"
+          className="w-11/12 h-auto object-cover"
           onError={(e) => {
             e.target.onerror = null;
             e.target.src =
