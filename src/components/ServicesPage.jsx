@@ -108,10 +108,9 @@ const ServicesPage = () => {
 
   return (
     <div
-      className="bg-white font-sans antialiased text-gray-900 w-full pb-12 sm:pb-12 md:pb-10 lg:pb-8 xl:pb-6 overflow-visible"
+      className="bg-white font-sans antialiased text-gray-900 w-full  overflow-visible"
       style={{
         maxWidth: "90rem",
-        minHeight: "97.8125rem",
         flexShrink: 0,
         margin: "0 auto",
         padding: "0 1rem",
