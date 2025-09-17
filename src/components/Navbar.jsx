@@ -1,10 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BrowserRouter as Router, Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
   const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Get height of first section (approximately viewport height)
+      const firstSectionHeight = window.innerHeight;
+
+      // Show navbar only when in the first section
+      if (window.scrollY <= firstSectionHeight) {
+        setShowNavbar(true);
+      } else {
+        setShowNavbar(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Initial check
+    handleScroll();
+
+    // Clean up
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const handleMenuToggle = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -49,7 +74,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className="w-full mx-auto px-4 sm:px-6 md:px-[3.75rem] absolute top-0 left-0 right-0 z-50 bg-black flex items-center"
+      className={`w-full mx-auto px-4 sm:px-6 md:px-[3.75rem] fixed top-0 left-0 right-0 z-50 bg-black flex items-center transition-opacity duration-300 ${showNavbar ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
       style={{
         height: "4.625rem",
         fontFamily: "Montserrat, sans-serif",
