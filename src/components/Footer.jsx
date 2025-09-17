@@ -96,7 +96,7 @@ const Footer = () => {
               />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/altecht_/"
               aria-label="Our Instagram profile"
               className="hover:opacity-75 transition-opacity"
             >
@@ -107,7 +107,7 @@ const Footer = () => {
               />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/company/altecht/"
               aria-label="Our LinkedIn profile"
               className="hover:opacity-75 transition-opacity"
             >
@@ -274,7 +274,7 @@ const Footer = () => {
               />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/altecht_/"
               aria-label="Our Instagram profile"
               className="hover:opacity-75 transition-opacity"
             >
@@ -285,7 +285,7 @@ const Footer = () => {
               />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/company/altecht/"
               aria-label="Our LinkedIn profile"
               className="hover:opacity-75 transition-opacity"
             >
