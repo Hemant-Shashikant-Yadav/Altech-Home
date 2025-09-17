@@ -49,7 +49,7 @@ const DetailedSection = ({ title, image, paragraph1, paragraph2, paragraph3, sam
                                     </button>
                                     <button
                                         className="flex items-center justify-center w-48 h-12 text-white border-2 border-white rounded-full bg-gray-900 transition-all duration-300 hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white cursor-pointer"
-                                        onClick={() => navigate('/collaboration')}
+                                        onClick={handleDiscussClick}
                                     >
                                         Let's Discuss
                                         <svg
@@ -77,7 +77,7 @@ const DetailedSection = ({ title, image, paragraph1, paragraph2, paragraph3, sam
                                     </button>
                                     <button
                                         className="flex items-center justify-center w-48 h-12 text-white border-2 border-white rounded-full bg-gray-900 transition-all duration-300 hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white cursor-pointer"
-                                        onClick={() => navigate('/collaboration')}
+                                        onClick={handleDiscussClick}
                                     >
                                         Let's Discuss
                                         <svg

@@ -61,7 +61,7 @@ export const ServiceItem = ({ text, delay, isLast }) => (
   </motion.div>
 );
 
-const Section = ({ title, description, services }) => (
+const Section = ({ title, description, services, onLearnMoreClick }) => (
   <div
     className="flex-shrink-0 w-full"
     style={{
@@ -120,12 +120,12 @@ const Section = ({ title, description, services }) => (
         {/* Button */}
         <motion.button
           whileHover={{
-            scale: 1.05,
             backgroundColor: "#FFF",
             color: "#000",
             borderColor: "#000",
           }}
           whileTap={{ scale: 0.95 }}
+          onClick={onLearnMoreClick}
           className="
             group flex justify-center items-center 
             border-2 border-white bg-[#1B1B1B] text-white

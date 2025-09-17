@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Tabs from "../components/Tabs";
 import DetailedSection from "../components/DetailedSection";
@@ -9,6 +10,7 @@ import TalentAcquisitionSection from "../components/TalentAqu";
 import CollaborationSection from "../components/CollaborationSection";
 import Footer from "../components/Footer";
 import Container from "../components/ui/Container";
+import FirstSectionWrapper from "../components/FirstSectionWrapper";
 
 const tabData = {
   strategy: {
@@ -68,11 +70,21 @@ const tabData = {
 
 const KnowMorePage = () => {
   const [activeTab, setActiveTab] = useState("strategy");
+  const location = useLocation();
+
+  // Check if we have an active tab passed from navigation
+  useEffect(() => {
+    if (location.state && location.state.activeTab) {
+      setActiveTab(location.state.activeTab);
+    }
+  }, [location.state]);
 
   return (
     <>
       <Container className="pt-25 md:pt-36">
-        <Tabs activeTab={activeTab} onTabChange={setActiveTab} />
+        <FirstSectionWrapper>
+          <Tabs activeTab={activeTab} onTabChange={setActiveTab} />
+        </FirstSectionWrapper>
       </Container>
       <div className="bg-black">
         <Container>
