@@ -49,21 +49,17 @@ const Navbar = () => {
 
   return (
     <nav
-      className="w-full mx-auto px-4 sm:px-6 md:px-[3.75rem] absolute top-0 left-0 right-0 z-50 bg-black"
+      className="w-full mx-auto px-4 sm:px-6 md:px-[3.75rem] absolute top-0 left-0 right-0 z-50 bg-black flex items-center"
       style={{
-        minHeight: "4.625rem",
+        height: "4.625rem",
         fontFamily: "Montserrat, sans-serif",
       }}
     >
-      <div className="flex justify-between items-center text-white h-[4.625rem] w-full">
+      <div className="flex justify-between items-center text-white h-[4.625rem] w-full relative">
         {/* Logo */}
         <motion.div
-          whileHover={{
-            scale: 1.05,
-            boxShadow: "0px 6px 15px rgba(0,0,0,0.3)",
-          }}
           whileTap={{ scale: 0.95 }}
-          className="flex items-center justify-start"
+          className="flex items-center justify-start absolute left-0"
           style={{ top: "0.625rem" }}
         >
           <Link
@@ -112,19 +108,19 @@ const Navbar = () => {
           </Link>
         </motion.div>
 
-        {/* Desktop Navigation Pills - Centered */}
-        <div className="hidden lg:grid lg:grid-cols-[1fr_auto_1fr] items-center w-full">
-          <div className=""></div> {/* Left spacer */}
-          <div className="grid grid-flow-col gap-[0.72rem] auto-cols-max justify-center">
+        {/* Desktop Navigation Pills - Absolutely Centered */}
+        <div className="hidden lg:flex items-center justify-center absolute left-0 right-0 mx-auto w-full h-full pointer-events-none">
+          <div className="flex items-center gap-[0.72rem] pointer-events-auto">
             {menuItems.map((item) => (
               <motion.div
                 key={item.path}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                className="flex items-center h-full"
               >
                 <Link
                   to={item.path}
-                  className="transition-all duration-300 whitespace-nowrap"
+                  className="transition-all duration-300 whitespace-nowrap flex items-center"
                   style={{
                     fontFamily: "Montserrat, sans-serif",
                     fontSize: "0.96069rem",
@@ -135,14 +131,12 @@ const Navbar = () => {
                     border: isActivePath(item.path) ? "0.06rem solid #FFF" : "0.06rem solid #898989",
                     background: isActivePath(item.path) ? "#FFF" : "#1B1B1B",
                     color: isActivePath(item.path) ? "#1B1B1B" : "#FFF",
-                    paddingTop: "0.50rem",
-                    paddingBottom: "0.50rem",
-                    paddingLeft: "0.50rem",
-                    paddingRight: "0.50rem",
+                    padding: "0 0.50rem",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     textDecoration: "none",
+                    margin: "auto 0",
                   }}
                   onMouseEnter={(e) => {
                     if (!isActivePath(item.path)) {
@@ -167,7 +161,6 @@ const Navbar = () => {
           <div className=""></div> {/* Right spacer */}
         </div>
 
-        {/* Medium Screen Navigation Pills - Centered */}
         <div className="hidden md:flex lg:hidden items-center justify-center flex-1">
           {menuItems.slice(0, 4).map((item) => (
             <motion.div
@@ -215,7 +208,7 @@ const Navbar = () => {
         </div>
 
         {/* Right side */}
-        <div className="flex items-center">
+        <div className="flex items-center absolute right-0">
           {/* Desktop CTA - Let's Talk Button */}
           <motion.div
             whileHover={{ scale: 1.05 }}
