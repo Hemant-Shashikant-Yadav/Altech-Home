@@ -9,14 +9,23 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Get height of first section (approximately viewport height)
-      const firstSectionHeight = window.innerHeight;
+      // Try to find the first section element by ID
+      const firstSection = document.getElementById('first-section');
 
-      // Show navbar only when in the first section
-      if (window.scrollY <= firstSectionHeight) {
-        setShowNavbar(true);
+      if (firstSection) {
+        // Get the bottom position of the first section
+        const firstSectionBottom = firstSection.getBoundingClientRect().bottom;
+
+        // Show navbar when the bottom of the first section is still in view
+        if (firstSectionBottom > 0) {
+          setShowNavbar(true);
+        } else {
+          setShowNavbar(false);
+        }
       } else {
-        setShowNavbar(false);
+        // Fallback: If no section with ID is found, use an approximate height
+        const approximateFirstSectionHeight = window.innerHeight;
+        setShowNavbar(window.scrollY <= approximateFirstSectionHeight);
       }
     };
 
@@ -29,7 +38,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [location.pathname]); // Re-run when path changes
 
   const handleMenuToggle = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -37,6 +46,19 @@ const Navbar = () => {
 
   const isActivePath = (path) => {
     return location.pathname === path;
+  };
+
+  // Handle navigation with scroll to top
+  const handleNavigation = (path) => {
+    // Only scroll to top if we're navigating to a different page
+    if (!isActivePath(path)) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Close mobile menu if it's open
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(false);
+    }
   };
 
   const dropdownVariants = {
@@ -147,6 +169,7 @@ const Navbar = () => {
                 <Link
                   to={item.path}
                   className="transition-all duration-300 whitespace-nowrap flex items-center"
+                  onClick={() => handleNavigation(item.path)}
                   style={{
                     fontFamily: "Montserrat, sans-serif",
                     fontSize: "0.96069rem",
@@ -197,6 +220,7 @@ const Navbar = () => {
               <Link
                 to={item.path}
                 className="transition-all duration-300 whitespace-nowrap"
+                onClick={() => handleNavigation(item.path)}
                 style={{
                   fontFamily: "Montserrat, sans-serif",
                   fontSize: "0.8rem",
@@ -244,6 +268,7 @@ const Navbar = () => {
             <Link
               to="/collaboration"
               className="transition-all duration-300 whitespace-nowrap"
+              onClick={() => handleNavigation("/collaboration")}
               style={{
                 fontFamily: "Montserrat, sans-serif",
                 fontSize: "0.96069rem",
@@ -327,7 +352,7 @@ const Navbar = () => {
                     <Link
                       to={item.path}
                       className="block py-2 text-base font-medium hover:text-gray-400 transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
+                      onClick={() => handleNavigation(item.path)}
                     >
                       {item.label}
                     </Link>
@@ -337,7 +362,7 @@ const Navbar = () => {
                   <Link
                     to="/collaboration"
                     className="bg-white text-black hover:bg-gray-200 transition-colors duration-300 font-medium py-2 px-4 rounded-full w-full block text-center text-sm"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={() => handleNavigation("/collaboration")}
                   >
                     Let's talk
                   </Link>

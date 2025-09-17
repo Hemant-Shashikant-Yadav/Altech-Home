@@ -5,7 +5,7 @@ const ScalableSolutions = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="min-h-screen flex items-center justify-center font-sans overflow-hidden box-border">
+        <div id="first-section" className="min-h-screen flex items-center justify-center font-sans overflow-hidden box-border">
             {/* Video Background */}
             <div className="absolute inset-0 w-full h-full">
                 <video
@@ -36,11 +36,11 @@ const ScalableSolutions = () => {
                     <span>Let's Collaborate</span>
                     <span className="w-[0.999rem] h-[1.035rem] flex items-center justify-center">
                         {/* Inline SVG icon with hover rotation */}
-                        <svg 
-                            xmlns="http://www.w3.org/2000/svg" 
-                            width="0.875rem" 
-                            height="0.875rem" 
-                            viewBox="0 0 14 14" 
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="0.875rem"
+                            height="0.875rem"
+                            viewBox="0 0 14 14"
                             fill="none"
                             className="transition-transform duration-300 group-hover:rotate-[42deg]"
                         >

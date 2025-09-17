@@ -5,12 +5,15 @@ import SmartKisan from "../components/SmartKisan";
 import CollaborationSection from "../components/CollaborationSection";
 import Footer from "../components/Footer";
 import Container from "../components/ui/Container";
+import FirstSectionWrapper from "../components/FirstSectionWrapper";
 
 const WorkPage = () => {
   return (
     <>
       <Container>
-        <TrustedSection />
+        <FirstSectionWrapper>
+          <TrustedSection />
+        </FirstSectionWrapper>
       </Container>
       <div className="bg-black">
         <Container>

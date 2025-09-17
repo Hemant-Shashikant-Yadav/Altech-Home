@@ -10,26 +10,30 @@ import IndustriesSection from "../components/IndustriesSection";
 import CollaborationSectionHome from "../components/CollaborationSectionHome";
 import Footer from "../components/Footer";
 import { sections } from "../data/sections";
+import FirstSectionWrapper from "../components/FirstSectionWrapper";
 import Container from "../components/ui/Container";
 
 const LandingPage = () => {
   return (
     <>
       <Container>
-        <ScalableSolutions />
+        <FirstSectionWrapper>
+          <ScalableSolutions />
+        </FirstSectionWrapper>
+
         <div className="bg-white">
           <AboutUsSection />
         </div>
         <ServicesPage />
         <FutureSolutions />
       </Container>
-      
+
       <div className="w-full bg-black">
         <Container>
           <ServicesSections sections={sections} />
         </Container>
       </div>
-      
+
       <Container>
         <IndustriesSection />
         <TestimonialsSection />

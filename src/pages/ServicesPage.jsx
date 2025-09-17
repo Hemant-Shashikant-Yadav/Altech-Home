@@ -6,12 +6,15 @@ import CollaborationSection1 from "../components/CollaborationSection1";
 import Footer from "../components/Footer";
 import Container from "../components/ui/Container";
 import { sections } from "../data/sections";
+import FirstSectionWrapper from "../components/FirstSectionWrapper";
 
 const ServicesPage = () => {
   return (
     <>
       <Container>
-        <CollaborationSection1 />
+        <FirstSectionWrapper>
+          <CollaborationSection1 />
+        </FirstSectionWrapper>
       </Container>
       <div className="w-full bg-black">
         <Container>
