@@ -222,7 +222,7 @@ const Navbar = () => {
                 fontFamily: "Montserrat, sans-serif",
                 fontSize: "0.96069rem",
                 fontWeight: "600",
-                width: "6.00rem",
+                width: "8.6875rem",
                 height: "1.94rem",
                 borderRadius: "2.75rem",
                 border: isActivePath("/collaboration") ? "0.06rem solid #FFF" : "0.06rem solid #898989",

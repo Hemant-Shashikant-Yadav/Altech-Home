@@ -25,7 +25,7 @@ const AboutUsSection = () => (
     <div className="flex flex-col items-center gap-8 sm:gap-12 md:gap-16 lg:gap-20 xl:gap-[3.06rem]">
       {/* Card 1 */}
       <div
-        className="inline-flex justify-center items-center bg-white w-full max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-none px-6 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12 lg:px-12 lg:py-16 xl:px-[2.375rem] xl:py-[4.75rem] rounded-3xl sm:rounded-[2rem] md:rounded-[2.5rem] xl:rounded-[3.125rem]"
+        className="inline-flex justify-center items-center bg-white w-full max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-5xl px-6 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12 lg:px-12 lg:py-16 xl:px-[2.375rem] xl:py-[4.75rem] rounded-3xl sm:rounded-[2rem] md:rounded-[2.5rem] xl:rounded-[3.125rem]"
         style={{
           gap: "0.625rem",
           boxShadow: "6px 8px 28.1px 0 rgba(0, 122, 236, 0.20)",
