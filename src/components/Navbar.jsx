@@ -156,29 +156,26 @@ const Navbar = () => {
         </div> */}
 
         {/* Right Side */}
-        <div className="flex items-center">
+        <div className="flex items-center justify-end ml-auto">
           {/* Desktop CTA */}
           <motion.div className="hidden lg:block">
             <Link
+            className={`transition-all bg-[#1B1B1B] duration-300 whitespace-nowrap hover:bg-white hover:text-[#1B1B1B] hover:border-white ${isActivePath("collaboration") ? 'bg-white text-[#1B1B1B] border-white' : ''} `}
               to="/collaboration"
               style={{
-                fontFamily: "Montserrat, sans-serif",
-                fontSize: "0.96069rem",
-                fontWeight: "600",
-                width: "6rem",
-                height: "1.94rem",
-                borderRadius: "2.75rem",
-                border: isActivePath("/collaboration")
-                  ? "0.06rem solid #FFF"
-                  : "0.06rem solid #898989",
-                background: isActivePath("/collaboration")
-                  ? "#FFF"
-                  : "#1B1B1B",
-                color: isActivePath("/collaboration") ? "#1B1B1B" : "#FFF",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
+                    fontFamily: "Montserrat, sans-serif",
+                    fontSize: "0.96069rem",
+                    fontWeight: "600",
+                    width: "6rem",
+                    height: "1.94rem",
+                    borderRadius: "2.75rem",
+                    border: isActivePath("collaboration")
+                      ? "0.06rem solid #FFF"
+                      : "0.06rem solid #898989",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
             >
               Let's talk
             </Link>

@@ -32,8 +32,8 @@ const SmartKisan = () => {
 
       {/* Empowering India's Farmers Section */}
       <div className="w-full flex flex-col lg:flex-row justify-between items-start text-left space-y-6 lg:space-y-0 lg:space-x-12">
-        <h2
-          className="text-white font-semibold leading-normal text-[1.75rem] sm:text-[2rem] lg:text-[2.5rem]"
+        <div
+          className="text-white font-semibold leading-normal text-[1.75rem] sm:text-[2rem] lg:text-[2.5rem]"    
           style={{
             width: "100%",
             maxWidth: "39.3125rem",
@@ -41,10 +41,10 @@ const SmartKisan = () => {
           }}
         >
           Empowering India's Farmers with Smart Technology
-        </h2>
+        </div>
         <div className="w-full max-w-[34.6875rem]">
           <p
-            className="text-white text-[1rem] sm:text-[1.125rem] lg:text-[1.24663rem] font-medium pb-6"
+            className="text-white text-[1rem] sm:text-[1.125rem] lg:text-[1.24663rem] font-normal pb-6 pt-4"
             style={{
               fontFamily: "Montserrat",
               lineHeight: "normal",
@@ -82,7 +82,7 @@ const SmartKisan = () => {
         </h2>
         <div className="w-full max-w-[34.6875rem]">
           <p
-            className="text-white text-[1rem] sm:text-[1.125rem] lg:text-[1.24663rem] font-medium pb-6"
+            className="text-white text-[1rem] sm:text-[1.125rem] lg:text-[1.24663rem] font-normal pb-6 pt-4"
             style={{
               fontFamily: "Montserrat",
               lineHeight: "normal",

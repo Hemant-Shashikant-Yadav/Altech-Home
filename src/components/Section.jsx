@@ -64,12 +64,10 @@ export const ServiceItem = ({ text, delay, isLast }) => (
 
 const Section = ({ title, description, services, onLearnMoreClick }) => (
   <div
-    className="flex-shrink-0 w-full px-4 sm:px-6 md:px-[3.75rem]"
+    className="flex-shrink-0 w-full"
     style={{
       minHeight: "clamp(40rem, 15vw + 30rem, 50rem)",
       flexShrink: 0,
-      maxWidth: "90rem",
-      margin: "0 auto",
       overflow: "visible",
     }}
   >
@@ -191,7 +189,7 @@ const Section = ({ title, description, services, onLearnMoreClick }) => (
 
       {/* Right Column - Aligned with navbar */}
       <div 
-        className="flex flex-col pt-0 lg:pt-[19.87rem] pb-20 lg:pb-32"
+        className="flex flex-col pt-0 lg:pt-[19.87rem] pb-20 lg:pb-32 lg:items-end"
       >
         {services.map((service, index) => (
           <ServiceItem
