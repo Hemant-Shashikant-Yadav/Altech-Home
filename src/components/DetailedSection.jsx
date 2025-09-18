@@ -20,13 +20,15 @@ const DetailedSection = ({
   return (
     <div className="bg-black shadow-lg pb-10 py-8 lg:py-16 max-w-[90rem] mx-auto">
       <div className="w-full max-w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 pb-10 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 pb-10 
+        ">
           {/* Left Column - Image */}
-          <div className="flex items-center justify-start ">
+          <div className="flex 
+           ">
             <img
               src={image}
               alt="Strategic visualization"
-              className="w-[569px] h-[671px] mt-4 sm:mt-8 lg:mt-14 object-contain flex-shrink-0"
+              className="w-[650px] h-[1000px] mt-4 sm:mt-8 lg:mt-40 object-contain flex-shrink-0"
             />
           </div>
 
