@@ -31,7 +31,7 @@ const FocusResearchSection = () => (
            gap-y-12 justify-items-start
           ">
             {/* Research */}
-            <div className="flex flex-col md:col-start-2 lg:m-10 md:my-5 lg:my-0 ">
+            <div className="flex flex-col md:col-start-2 lg:m-10 my-5 lg:my-0 ">
               <div
                 style={{ minHeight: "clamp(3rem, 4vw + 2rem, 4.5rem)" }}
                 className="flex items-start"
