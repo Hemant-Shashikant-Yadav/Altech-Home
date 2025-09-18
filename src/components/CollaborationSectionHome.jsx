@@ -56,7 +56,10 @@ const CollaborationSectionHome = () => {
                     border-2 border-[#BADEFF] bg-[#007AEC] cursor-pointer
                     hover:bg-black hover:drop-shadow-[0_0_0.5rem_rgba(0,0,0,0.5)] hover:border-gray-700
                 "
-                onClick={() => navigate('/collaboration')}
+                onClick={() => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    navigate('/collaboration');
+                }}
             >
                 {/* Button Text */}
                 <span
