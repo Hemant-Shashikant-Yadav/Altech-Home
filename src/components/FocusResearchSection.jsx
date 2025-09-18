@@ -9,15 +9,16 @@ const FocusResearchSection = () => (
         paddingRight: "clamp(1rem, 2vw + 0.5rem, 2rem)",
       }}
     >
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-4">
         {/* Title */}
         <div className="lg:col-span-1">
           <h2
             className="text-white font-montserrat"
             style={{
-              fontSize: "clamp(1.5rem, 3vw + 0.8rem, 2.5rem)",
-              fontWeight: 600,
+              fontStyle: "normal",
+              fontWeight: 500,
               lineHeight: "normal",
+              fontSize: "1.4rem",
             }}
           >
             Focus -
@@ -26,9 +27,11 @@ const FocusResearchSection = () => (
 
         {/* Right Grid */}
         <div className="lg:col-span-3">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
+          <div className="grid grid-cols-1 md:grid-cols-3
+           gap-y-12 justify-items-start
+          ">
             {/* Research */}
-            <div className="flex flex-col">
+            <div className="flex flex-col md:col-start-2 lg:m-10 my-5">
               <div
                 style={{ minHeight: "clamp(3rem, 4vw + 2rem, 4.5rem)" }}
                 className="flex items-start"

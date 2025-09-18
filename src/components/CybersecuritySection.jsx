@@ -15,11 +15,12 @@ const CybersecuritySection = () => (
         <div className="lg:col-span-1">
           <h2
             className="text-white font-montserrat"
-            style={{
-              fontSize: "clamp(1.5rem, 3vw + 0.8rem, 2.5rem)",
-              fontWeight: 600,
-              lineHeight: "normal",
-            }}
+                  style={{
+                    fontStyle: "normal",
+                    fontWeight: 500,
+                    lineHeight: "normal",
+                    fontSize: "1.4rem",
+                  }}
           >
             Capabilities -
           </h2>

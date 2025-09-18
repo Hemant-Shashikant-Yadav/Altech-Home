@@ -38,9 +38,10 @@ export const ServiceItem = ({ text, delay, isLast }) => (
       <span
         className="text-white font-montserrat"
         style={{
-          fontSize: "clamp(1rem, 2vw + 0.5rem, 1.5rem)",
-          fontWeight: 500,
+          fontSize: "1.5rem",
+          fontWeight: 400,
           lineHeight: "normal",
+          fontStyle: "normal"
         }}
       >
         {text}
@@ -107,8 +108,11 @@ const Section = ({ title, description, services, onLearnMoreClick }) => (
           style={{
             width: "100%",
             maxWidth: "clamp(18rem, 90vw, 35.4375rem)",
-            fontSize: "clamp(0.875rem, 1vw + 0.5rem, 1rem)",
-            fontWeight: 500,
+            color: "#FFF",
+            fontFamily: "Montserrat",
+            fontSize: "1rem",
+            fontStyle: "normal", 
+            fontWeight: 400,
             lineHeight: "normal",
             marginBottom: "clamp(2rem, 3vw + 1.5rem, 3.38rem)",
           }}
