@@ -26,13 +26,13 @@ const DetailedSection = ({
             <img
               src={image}
               alt="Strategic visualization"
-              className="w-full sm:w-4/5  lg:w-3/5 h-auto mt-4 sm:mt-8 lg:mt-14 max-w-full md:max-w-lg lg:max-w-xl object-contain "
-            />  
+              className="w-[569px] h-[671px] mt-4 sm:mt-8 lg:mt-14 object-contain flex-shrink-0"
+            />
           </div>
 
           {/* Right Column - Text */}
           <div className="flex flex-col space-y-6 md:space-y-8">
-            <h2 className="text-white font-montserrat text-[1.25rem] md:text-[1.375rem] lg:text-[1.5rem] font-semibold leading-tight md:leading-normal max-w-full md:max-w-[28rem] lg:max-w-[34.6875rem]">
+            <h2 className="text-white font-montserrat text-[24px] font-normal leading-normal max-w-full md:max-w-[28rem] lg:max-w-[34.6875rem]">
               {title}
             </h2>
 
@@ -40,7 +40,7 @@ const DetailedSection = ({
             <div className="md:hidden">
               {!expanded ? (
                 <>
-                  <p className="text-[1rem] text-[#A0A0A0] leading-[1.6] font-montserrat">
+                  <p className="text-[24px] text-[#A0A0A0] font-normal leading-normal font-montserrat">
                     {sammary}
                   </p>
                   <button
@@ -72,13 +72,13 @@ const DetailedSection = ({
                 </>
               ) : (
                 <div className="lg:max-w-[555px]">
-                  <p className="text-lg text-gray-400 leading-relaxed">
+                  <p className="text-[24px] text-gray-400 font-normal leading-normal">
                     {paragraph1}
                   </p>
-                  <p className="text-lg text-gray-400 leading-relaxed">
+                  <p className="text-[24px] text-gray-400 font-normal leading-normal">
                     {paragraph2}
                   </p>
-                  <p className="text-lg text-gray-400 leading-relaxed">
+                  <p className="text-[24px] text-gray-400 font-normal leading-normal">
                     {paragraph3}
                   </p>
                   <button
@@ -113,13 +113,13 @@ const DetailedSection = ({
 
             {/* Desktop: Always show full content */}
             <div className="hidden md:flex flex-col">
-              <p className="text-[#A0A0A0] font-montserrat text-[1rem] md:text-[0.9375rem] lg:text-[1rem] font-normal leading-[1.6] mb-6 max-w-full md:max-w-[28rem] lg:max-w-[34.6875rem]">
+              <p className="text-[#A0A0A0] font-montserrat text-[24px] font-normal leading-normal mb-6 max-w-full md:max-w-[28rem] lg:max-w-[34.6875rem]">
                 {paragraph1}
               </p>
-              <p className="text-[#A0A0A0] font-montserrat text-[1rem] md:text-[0.9375rem] lg:text-[1rem] font-normal leading-[1.6] mb-6 max-w-full md:max-w-[28rem] lg:max-w-[34.6875rem]">
+              <p className="text-[#A0A0A0] font-montserrat text-[24px] font-normal leading-normal mb-6 max-w-full md:max-w-[28rem] lg:max-w-[34.6875rem]">
                 {paragraph2}
               </p>
-              <p className="text-[#A0A0A0] font-montserrat text-[1rem] md:text-[0.9375rem] lg:text-[1rem] font-normal leading-[1.6] mb-6 max-w-full md:max-w-[28rem] lg:max-w-[34.6875rem]">
+              <p className="text-[#A0A0A0] font-montserrat text-[24px] font-normal leading-normal mb-6 max-w-full md:max-w-[28rem] lg:max-w-[34.6875rem]">
                 {paragraph3}
               </p>
               <button

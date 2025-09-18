@@ -199,7 +199,7 @@ const Navbar = () => {
                 <motion.div variants={itemVariants} className="pt-3">
                   <Link
                     to="/collaboration"
-                    className="bg-white text-black hover:bg-gray-200 font-medium py-2 px-4 rounded-full w-full block text-center text-sm"
+                    className="bg-white text-black hover:bg-gray-200 font-medium py-2 px-4 rounded-full w-full block text-center text-sm p-2"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Let's talk
