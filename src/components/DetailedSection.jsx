@@ -34,7 +34,7 @@ const DetailedSection = ({
 
           {/* Right Column - Text */}
           <div className="flex flex-col space-y-6 md:space-y-8">
-            <h2 className="text-white font-montserrat text-[24px] font-normal leading-normal max-w-full md:max-w-[28rem] lg:max-w-[34.6875rem]">
+            <h2 className="text-white font-montserrat text-[24px] font-normal leading-normal max-w-full ">
               {title}
             </h2>
 
@@ -83,6 +83,9 @@ const DetailedSection = ({
                   <p className="text-[24px] text-gray-400 font-normal leading-normal">
                     {paragraph3}
                   </p>
+                  <p className="text-[24px] text-gray-400 font-normal leading-normal">
+                    {paragraph3}
+                  </p>
                   <button
                     className="text-blue-500 underline mt-4 focus:outline-none mb-10"
                     onClick={() => setExpanded(false)}
@@ -115,13 +118,13 @@ const DetailedSection = ({
 
             {/* Desktop: Always show full content */}
             <div className="hidden md:flex flex-col">
-              <p className="text-[#A0A0A0] font-montserrat text-[24px] font-normal leading-normal mb-6 max-w-full md:max-w-[28rem] lg:max-w-[34.6875rem]">
+              <p className="text-[#A0A0A0] font-montserrat text-[24px] font-normal leading-normal mb-8 max-w-full ">
                 {paragraph1}
               </p>
-              <p className="text-[#A0A0A0] font-montserrat text-[24px] font-normal leading-normal mb-6 max-w-full md:max-w-[28rem] lg:max-w-[34.6875rem]">
+              <p className="text-[#A0A0A0] font-montserrat text-[24px] font-normal leading-normal mb-8 max-w-full ">
                 {paragraph2}
               </p>
-              <p className="text-[#A0A0A0] font-montserrat text-[24px] font-normal leading-normal mb-6 max-w-full md:max-w-[28rem] lg:max-w-[34.6875rem]">
+              <p className="text-[#A0A0A0] font-montserrat text-[24px] font-normal leading-normal mb-8 max-w-full ">
                 {paragraph3}
               </p>
               <button

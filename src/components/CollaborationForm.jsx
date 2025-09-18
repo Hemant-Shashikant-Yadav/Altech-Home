@@ -14,7 +14,7 @@ const InputField = ({
   isDescription = false,
 }) => (
   <div
-    className="flex flex-col w-full lg:w-[40.3125rem] mt-[1.5rem] md:mt-[3.25rem]"
+    className="flex flex-col w-full lg:w-[40.3125rem] md:w-[35rem] mt-[1.5rem] md:mt-[3.25rem]"
     style={{
       height: isDescription ? "auto" : "6.1875rem",
       paddingBottom: "1.0625rem",
@@ -42,7 +42,7 @@ const InputField = ({
         value={value}
         onChange={onChange}
         onBlur={onBlur}
-        className="w-full lg:w-[40.3125rem]"
+        className="w-full lg:w-[40.3125rem] md:w-[35rem]"
         style={{
           display: "flex",
           padding: "1.03125rem 1.25rem",
@@ -64,7 +64,7 @@ const InputField = ({
         value={value}
         onChange={onChange}
         onBlur={onBlur}
-        className="w-full lg:w-[40.3125rem]"
+        className="w-full lg:w-[40.3125rem] md:w-[35rem]"
         style={{
           display: "flex",
           padding: "1.03125rem 1.25rem",
@@ -155,47 +155,46 @@ const CollaborationForm = () => {
   };
 
   return (
-    <div className="mb-40 lg:mb-[28.4rem] px-4 lg:px-0 w-fulll">
+    <div className="mb-40 lg:mb-[28.4rem] md:mb-[24rem] px-4 lg:px-0 md:px-6 w-full">
       {/* Main heading */}
       <h2
-        className="text-2xl lg:text-9xl font-semibold mt-32 lg:mt-40 mb-6 lg:mb-12"
+        className="text-5xl md:text-7xl lg:text-9xl font-semibold mt-32 lg:mt-40 md:mt-36 mb-6 lg:mb-12 md:mb-10"
         style={{ fontFamily: "Montserrat", color: "#000" }}
       >
         Collaboration
       </h2>
 
-      <div className="flex flex-col lg:flex-row lg:justify-between">
+      <div className="flex flex-col lg:flex-row md:flex-row lg:justify-between md:justify-between gap-4">
         {/* Left Column - Image (hidden on mobile) */}
         <div
-          className="hidden lg:block"
+          className="hidden lg:block  w-full lg:w-[34.25rem] md:w-[30rem]"
           style={{
-            width: "34.25rem",
-            height: "58.8125rem",
+            height: "auto",
+            maxHeight: "58.8125rem",
             flexShrink: 0,
           }}
         >
           <img
             src="All Images Landing page Altecht/Collaborate_Cpntact.jpg"
             alt="Two business people shaking hands over a tablet"
+            className="w-full h-full object-cover"
             style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
+              maxHeight: "inherit"
             }}
           />
         </div>
 
         {/* Right Column - Form */}
-        <div className="flex flex-col w-full lg:w-auto">
+        <div className="flex flex-col w-full lg:w-auto md:w-auto">
           <h3
-            className="text-[1.5rem] sm:text-[2rem] lg:text-[2.5rem] font-semibold mt-6 lg:mt-[3.25rem] mb-6 lg:mb-[3.25rem]"
+            className="text-[1.5rem] sm:text-[2rem] lg:text-[2.5rem] md:text-[2.2rem] font-semibold mt-6 lg:mt-[3.25rem] md:mt-[2.75rem] mb-6 lg:mb-[3.25rem] md:mb-[2.75rem]"
             style={{ fontFamily: "Montserrat", color: "#000" }}
           >
             Got an idea? Let's build it
           </h3>
 
           <hr
-            className="mb-6 lg:mb-[3.12rem] w-full lg:w-[40.3125rem]"
+            className="mb-6 lg:mb-[3.12rem] md:mb-[2.75rem] w-full lg:w-[40.3125rem] md:w-[35rem]"
             style={{
               height: "0.0625rem",
               background: "rgba(80, 80, 80, 0.10)",
@@ -247,7 +246,7 @@ const CollaborationForm = () => {
 
             <button
               type="submit"
-              className="w-full lg:w-[40.3125rem] h-[3.9375rem] rounded-[3.5625rem] bg-[#007AEC] text-white font-semibold text-[1rem] lg:text-[1.125rem] mt-6 md:mt-0"
+              className="w-full lg:w-[40.3125rem] md:w-[35rem] h-[3.9375rem] rounded-[3.5625rem] bg-[#007AEC] text-white font-semibold text-[1rem] lg:text-[1.125rem] md:text-[1.0625rem] mt-6 md:mt-0"
               style={{
                 fontFamily: "Montserrat",
                 border: "1px solid #FFF",
