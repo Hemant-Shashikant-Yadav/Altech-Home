@@ -1,110 +1,130 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const DetailedSection = ({ title, image, paragraph1, paragraph2, paragraph3, sammary }) => {
-    const [expanded, setExpanded] = useState(false);
-    const navigate = useNavigate();
+const DetailedSection = ({
+  title,
+  image,
+  paragraph1,
+  paragraph2,
+  paragraph3,
+  sammary,
+}) => {
+  const [expanded, setExpanded] = useState(false);
+  const navigate = useNavigate();
 
-    const handleDiscussClick = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        navigate('/collaboration');
-    };
+  const handleDiscussClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    navigate("/collaboration");
+  };
 
-    return (
-        <div className="bg-black shadow-lg pb-10py-8 lg:py-16">
-            <div className=" w-full max-w-full px-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 pb-10 items-center">
-                    {/* Left Column - Image */}
-                    <div className="flex items-center justify-center">
-                        <img
-                            src={image}
-                            alt="Strategic visualization"
-                            className="rounded-2xl shadow-lg w-full h-auto md:w-[28rem] lg:w-[35.5625rem] object-cover"
-                            style={{
-                                maxHeight: "41.9375rem",
-                                aspectRatio: "0.85",
-                                flexShrink: 0
-                            }}
-                        />
-                    </div>
+  return (
+    <div className="bg-black shadow-lg pb-10py-8 lg:py-16">
+      <div className="w-full max-w-full px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 pb-10 items-center">
+          {/* Left Column - Image */}
+          <div className="flex items-center justify-center">
+            <img
+              src={image}
+              alt="Strategic visualization"
+              className=" w-3/5 lg:mt-14 h-auto max-w-full md:max-w-lg lg:max-w-xl object-contain"
+            />
+          </div>
 
-                    {/* Right Column - Text */}
-                    <div className="flex flex-col space-y-6 md:space-y-8">
-                        <h2
-                            className="text-white font-montserrat text-[1.25rem] md:text-[1.375rem] lg:text-[1.5rem] font-semibold leading-tight md:leading-normal max-w-full md:max-w-[28rem] lg:max-w-[34.6875rem]"
-                        >
-                            {title}
-                        </h2>
+          {/* Right Column - Text */}
+          <div className="flex flex-col space-y-6 md:space-y-8">
+            <h2 className="text-white font-montserrat text-[1.25rem] md:text-[1.375rem] lg:text-[1.5rem] font-semibold leading-tight md:leading-normal max-w-full md:max-w-[28rem] lg:max-w-[34.6875rem]">
+              {title}
+            </h2>
 
-                        {/* Mobile: Summary or Expanded */}
-                        <div className="md:hidden">
-                            {!expanded ? (
-                                <>
-                                    <p className="text-[1rem] text-[#A0A0A0] leading-[1.6] font-montserrat">{sammary}</p>
-                                    <button
-                                        className="text-[#007AEC] text-[1rem] underline focus:outline-none mb-6 mt-4 font-montserrat"
-                                        onClick={() => setExpanded(true)}
-                                    >
-                                        View More
-                                    </button>
-                                    <button
-                                        className="flex items-center justify-center w-48 h-12 text-white border-2 border-white rounded-full bg-gray-900 transition-all duration-300 hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white cursor-pointer"
-                                        onClick={handleDiscussClick}
-                                    >
-                                        Let's Discuss
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="h-5 w-5 ml-2 transform -rotate-45"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                            strokeWidth={2}
-                                        >
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                        </svg>
-                                    </button>
-                                </>
-                            ) : (
-                                <>
-                                    <p className="text-lg text-gray-400 leading-relaxed">{paragraph1}</p>
-                                    <p className="text-lg text-gray-400 leading-relaxed">{paragraph2}</p>
-                                    <p className="text-lg text-gray-400 leading-relaxed">{paragraph3}</p>
-                                    <button
-                                        className="text-blue-500 underline mt-4 focus:outline-none mb-10"
-                                        onClick={() => setExpanded(false)}
-                                    >
-                                        View Less
-                                    </button>
-                                    <button
-                                        className="flex items-center justify-center w-48 h-12 text-white border-2 border-white rounded-full bg-gray-900 transition-all duration-300 hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white cursor-pointer"
-                                        onClick={handleDiscussClick}
-                                    >
-                                        Let's Discuss
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="h-5 w-5 ml-2 transform -rotate-45"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                            strokeWidth={2}
-                                        >
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                        </svg>
-                                    </button>
-                                </>
-                            )}
-                        </div>
+            {/* Mobile: Summary or Expanded */}
+            <div className="md:hidden">
+              {!expanded ? (
+                <>
+                  <p className="text-[1rem] text-[#A0A0A0] leading-[1.6] font-montserrat">
+                    {sammary}
+                  </p>
+                  <button
+                    className="text-[#007AEC] text-[1rem] underline focus:outline-none mb-6 mt-4 font-montserrat"
+                    onClick={() => setExpanded(true)}
+                  >
+                    View More
+                  </button>
+                  <button
+                    className="flex items-center justify-center w-48 h-12 text-white border-2 border-white rounded-full bg-gray-900 transition-all duration-300 hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white cursor-pointer"
+                    onClick={handleDiscussClick}
+                  >
+                    Let's Discuss
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 ml-2 transform -rotate-45"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      />
+                    </svg>
+                  </button>
+                </>
+              ) : (
+                <>
+                  <p className="text-lg text-gray-400 leading-relaxed">
+                    {paragraph1}
+                  </p>
+                  <p className="text-lg text-gray-400 leading-relaxed">
+                    {paragraph2}
+                  </p>
+                  <p className="text-lg text-gray-400 leading-relaxed">
+                    {paragraph3}
+                  </p>
+                  <button
+                    className="text-blue-500 underline mt-4 focus:outline-none mb-10"
+                    onClick={() => setExpanded(false)}
+                  >
+                    View Less
+                  </button>
+                  <button
+                    className="flex items-center justify-center w-48 h-12 text-white border-2 border-white rounded-full bg-gray-900 transition-all duration-300 hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white cursor-pointer"
+                    onClick={handleDiscussClick}
+                  >
+                    Let's Discuss
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 ml-2 transform -rotate-45"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      />
+                    </svg>
+                  </button>
+                </>
+              )}
+            </div>
 
-                        {/* Desktop: Always show full content */}
-                        <div className="hidden md:flex flex-col">
-                            <p
-                                className="text-[#A0A0A0] font-montserrat text-[1rem] md:text-[0.9375rem] lg:text-[1rem] font-normal leading-[1.6] mb-6 max-w-full md:max-w-[28rem] lg:max-w-[34.6875rem]"
-                            >
-                                {paragraph1} {paragraph2} {paragraph3}
-                            </p>
-                            <button
-          onClick={handleDiscussClick}
-          className="
+            {/* Desktop: Always show full content */}
+            <div className="hidden md:flex flex-col">
+              <p className="text-[#A0A0A0] font-montserrat text-[1rem] md:text-[0.9375rem] lg:text-[1rem] font-normal leading-[1.6] mb-6 max-w-full md:max-w-[28rem] lg:max-w-[34.6875rem]">
+                {paragraph1}
+              </p>
+              <p className="text-[#A0A0A0] font-montserrat text-[1rem] md:text-[0.9375rem] lg:text-[1rem] font-normal leading-[1.6] mb-6 max-w-full md:max-w-[28rem] lg:max-w-[34.6875rem]">
+                {paragraph2}
+              </p>
+              <p className="text-[#A0A0A0] font-montserrat text-[1rem] md:text-[0.9375rem] lg:text-[1rem] font-normal leading-[1.6] mb-6 max-w-full md:max-w-[28rem] lg:max-w-[34.6875rem]">
+                {paragraph3}
+              </p>
+              <button
+                onClick={handleDiscussClick}
+                className="
             group flex justify-center items-center 
             border-2 border-white bg-[#1B1B1B] text-white
             hover:bg-white hover:text-black hover:border-black hover:scale-105
@@ -113,69 +133,69 @@ const DetailedSection = ({ title, image, paragraph1, paragraph2, paragraph3, sam
             focus:outline-none focus:ring-2 focus:ring-white
             cursor-pointer
           "
-          style={{
-            display: "flex",
-            width: "clamp(10rem, 12vw + 6rem, 18.5rem)",
-            height: "clamp(2.5rem, 3vw + 2rem, 4rem)",
-            padding: "clamp(0.4rem, 0.5vw + 0.3rem, 0.625rem)",
-            gap: "clamp(0.5rem, 0.8vw + 0.3rem, 0.75rem)",
-            flexShrink: 0,
-            borderRadius: "clamp(2rem, 3vw + 1.5rem, 3.5625rem)",
-          }}
-        >
-          {/* Button Text */}
-          <span
-            className="font-montserrat whitespace-nowrap"
-            style={{
-              flexShrink: 0,
-              fontSize: "clamp(0.875rem, 1vw + 0.5rem, 1.24663rem)",
-              fontWeight: 600,
-              lineHeight: "normal",
-            }}
-          >
-            Learn More
-          </span>
+                style={{
+                  display: "flex",
+                  width: "clamp(10rem, 12vw + 6rem, 18.5rem)",
+                  height: "clamp(2.5rem, 3vw + 2rem, 4rem)",
+                  padding: "clamp(0.4rem, 0.5vw + 0.3rem, 0.625rem)",
+                  gap: "clamp(0.5rem, 0.8vw + 0.3rem, 0.75rem)",
+                  flexShrink: 0,
+                  borderRadius: "clamp(2rem, 3vw + 1.5rem, 3.5625rem)",
+                }}
+              >
+                {/* Button Text */}
+                <span
+                  className="font-montserrat whitespace-nowrap"
+                  style={{
+                    flexShrink: 0,
+                    fontSize: "clamp(0.875rem, 1vw + 0.5rem, 1.24663rem)",
+                    fontWeight: 600,
+                    lineHeight: "normal",
+                  }}
+                >
+                  Learn More
+                </span>
 
-          {/* Arrow icon */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="28"
-            viewBox="0 0 28 28"
-            fill="none"
-            className="group-hover:rotate-[42.597deg]"
-            style={{
-              width: "clamp(0.875rem, 1vw + 0.5rem, 1.22713rem)",
-              height: "clamp(0.875rem, 1vw + 0.5rem, 1.22713rem)",
-              flexShrink: 0,
-            }}
-          >
-            <g clipPath="url(#clip0_65_239)">
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M17.6564 9.39408L8.18287 18.0978C7.80888 18.4416 7.78398 19.0246 8.12742 19.3982C8.47128 19.7721 9.05429 19.7971 9.42782 19.4536L18.9732 10.6848C18.9909 10.801 18.9945 10.9202 18.9852 11.0396C18.729 14.1941 18.3302 19.1025 18.3302 19.1025C18.289 19.6088 18.6664 20.0528 19.1727 20.0941C19.679 20.1353 20.1235 19.7575 20.1647 19.2511C20.1647 19.2511 20.5635 14.3436 20.8201 11.1887C20.895 10.2621 20.5852 9.34591 19.9629 8.6554C19.34 7.9653 18.4611 7.56234 17.5318 7.54158L9.37047 7.35971C8.8629 7.34796 8.44083 7.75103 8.4295 8.25905C8.41861 8.76666 8.82127 9.18827 9.32929 9.19961L17.4906 9.38148C17.5462 9.38294 17.6016 9.387 17.6564 9.39408Z"
-                fill="currentColor"
-              />
-            </g>
-            <defs>
-              <clipPath id="clip0_65_239">
-                <rect
-                  width="19.6343"
-                  height="19.6343"
-                  fill="white"
-                  transform="translate(0.128662 13.418) rotate(-42.5966)"
-                />
-              </clipPath>
-            </defs>
-          </svg>
-        </button>
-                        </div>
-                    </div>
-                </div>
+                {/* Arrow icon */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  className="group-hover:rotate-[42.597deg]"
+                  style={{
+                    width: "clamp(0.875rem, 1vw + 0.5rem, 1.22713rem)",
+                    height: "clamp(0.875rem, 1vw + 0.5rem, 1.22713rem)",
+                    flexShrink: 0,
+                  }}
+                >
+                  <g clipPath="url(#clip0_65_239)">
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M17.6564 9.39408L8.18287 18.0978C7.80888 18.4416 7.78398 19.0246 8.12742 19.3982C8.47128 19.7721 9.05429 19.7971 9.42782 19.4536L18.9732 10.6848C18.9909 10.801 18.9945 10.9202 18.9852 11.0396C18.729 14.1941 18.3302 19.1025 18.3302 19.1025C18.289 19.6088 18.6664 20.0528 19.1727 20.0941C19.679 20.1353 20.1235 19.7575 20.1647 19.2511C20.1647 19.2511 20.5635 14.3436 20.8201 11.1887C20.895 10.2621 20.5852 9.34591 19.9629 8.6554C19.34 7.9653 18.4611 7.56234 17.5318 7.54158L9.37047 7.35971C8.8629 7.34796 8.44083 7.75103 8.4295 8.25905C8.41861 8.76666 8.82127 9.18827 9.32929 9.19961L17.4906 9.38148C17.5462 9.38294 17.6016 9.387 17.6564 9.39408Z"
+                      fill="currentColor"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_65_239">
+                      <rect
+                        width="19.6343"
+                        height="19.6343"
+                        fill="white"
+                        transform="translate(0.128662 13.418) rotate(-42.5966)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
             </div>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default DetailedSection;

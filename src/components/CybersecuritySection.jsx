@@ -1,7 +1,7 @@
 import React from "react";
 
 const CybersecuritySection = () => (
-  <div className="bg-[#0B0B0B] py-16">
+  <div className="bg-black py-16">
     <div
       className="max-w-[90rem] mx-auto"
       style={{
