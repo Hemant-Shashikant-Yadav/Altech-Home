@@ -129,13 +129,13 @@ const Navbar = () => {
             {/* Desktop CTA */}
             <motion.div className="hidden lg:block">
               <Link
-                className={`transition-all bg-[#1B1B1B] duration-300 whitespace-nowrap hover:bg-white hover:text-[#1B1B1B] hover:border-white ${isActivePath("collaboration") ? 'bg-white text-[#1B1B1B] border-white' : ''}  mr-20`}
+                className={`transition-all bg-[#1B1B1B] duration-300 whitespace-nowrap hover:bg-white hover:text-[#1B1B1B] hover:border-white ${isActivePath("collaboration") ? 'bg-white text-[#1B1B1B] border-white' : ''}  `}
                 to="/collaboration"
                 style={{
                   fontFamily: "Montserrat, sans-serif",
                   fontSize: "0.96069rem",
                   fontWeight: "600",
-                  width: "6rem",
+                  width: "8rem",
                   height: "1.94rem",
                   borderRadius: "2.75rem",
                   border: isActivePath("collaboration")
@@ -199,7 +199,7 @@ const Navbar = () => {
                 <motion.div variants={itemVariants} className="pt-3">
                   <Link
                     to="/collaboration"
-                    className="bg-white text-black hover:bg-gray-200 font-medium py-2 px-4 rounded-full w-full block text-center text-sm p-2"
+                    className="bg-white text-black hover:bg-gray-200 font-medium py-4 px-6 rounded-full w-full block text-center text-sm "
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Let's talk
