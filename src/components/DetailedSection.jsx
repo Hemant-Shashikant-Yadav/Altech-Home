@@ -103,35 +103,73 @@ const DetailedSection = ({ title, image, paragraph1, paragraph2, paragraph3, sam
                                 {paragraph1} {paragraph2} {paragraph3}
                             </p>
                             <button
-                                className="flex justify-center items-center gap-3 w-[16rem] md:w-[17rem] lg:w-[18.5rem] h-[3.5rem] md:h-[3.75rem] lg:h-[4rem] px-4 rounded-[3.5625rem] border-2 border-white bg-[#1B1B1B] cursor-pointer mt-6 md:mt-8 lg:mt-[2.13rem] transition-all duration-300 hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white"
-                                onClick={handleDiscussClick}
-                            >
-                                <span
-                                    className="text-white font-montserrat text-[1rem] md:text-[1.125rem] lg:text-[1.24663rem] font-semibold whitespace-nowrap"
-                                >
-                                    Let's Discuss
-                                </span>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="29"
-                                    height="28"
-                                    viewBox="0 0 29 28"
-                                    fill="none"
-                                    style={{
-                                        width: "1.22713rem",
-                                        height: "1.22713rem",
-                                        transform: "rotate(-42.597deg)",
-                                        flexShrink: 0
-                                    }}
-                                >
-                                    <path
-                                        fillRule="evenodd"
-                                        clipRule="evenodd"
-                                        d="M18.1565 9.39408L8.68293 18.0978C8.30894 18.4416 8.28404 19.0246 8.62748 19.3982C8.97134 19.7721 9.55435 19.7971 9.92788 19.4536L19.4732 10.6848C19.4909 10.801 19.4946 10.9202 19.4852 11.0396C19.2291 14.1941 18.8303 19.1025 18.8303 19.1025C18.789 19.6088 19.1664 20.0528 19.6728 20.0941C20.1791 20.1353 20.6236 19.7575 20.6648 19.2511C20.6648 19.2511 21.0636 14.3436 21.3202 11.1887C21.3951 10.2621 21.0853 9.34591 20.4629 8.6554C19.8401 7.9653 18.9612 7.56234 18.0319 7.54158L9.87053 7.35971C9.36296 7.34796 8.94089 7.75103 8.92956 8.25905C8.91867 8.76666 9.32133 9.18827 9.82935 9.19961L17.9907 9.38148C18.0462 9.38294 18.1016 9.387 18.1565 9.39408Z"
-                                        fill="white"
-                                    />
-                                </svg>
-                            </button>
+          onClick={handleDiscussClick}
+          className="
+            group flex justify-center items-center 
+            border-2 border-white bg-[#1B1B1B] text-white
+            hover:bg-white hover:text-black hover:border-black hover:scale-105
+            hover:shadow-[0_0_15px_rgba(255,255,255,0.5)]
+            active:scale-95
+            focus:outline-none focus:ring-2 focus:ring-white
+            cursor-pointer
+          "
+          style={{
+            display: "flex",
+            width: "clamp(10rem, 12vw + 6rem, 18.5rem)",
+            height: "clamp(2.5rem, 3vw + 2rem, 4rem)",
+            padding: "clamp(0.4rem, 0.5vw + 0.3rem, 0.625rem)",
+            gap: "clamp(0.5rem, 0.8vw + 0.3rem, 0.75rem)",
+            flexShrink: 0,
+            borderRadius: "clamp(2rem, 3vw + 1.5rem, 3.5625rem)",
+          }}
+        >
+          {/* Button Text */}
+          <span
+            className="font-montserrat whitespace-nowrap"
+            style={{
+              flexShrink: 0,
+              fontSize: "clamp(0.875rem, 1vw + 0.5rem, 1.24663rem)",
+              fontWeight: 600,
+              lineHeight: "normal",
+            }}
+          >
+            Learn More
+          </span>
+
+          {/* Arrow icon */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
+            fill="none"
+            className="group-hover:rotate-[42.597deg]"
+            style={{
+              width: "clamp(0.875rem, 1vw + 0.5rem, 1.22713rem)",
+              height: "clamp(0.875rem, 1vw + 0.5rem, 1.22713rem)",
+              flexShrink: 0,
+            }}
+          >
+            <g clipPath="url(#clip0_65_239)">
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M17.6564 9.39408L8.18287 18.0978C7.80888 18.4416 7.78398 19.0246 8.12742 19.3982C8.47128 19.7721 9.05429 19.7971 9.42782 19.4536L18.9732 10.6848C18.9909 10.801 18.9945 10.9202 18.9852 11.0396C18.729 14.1941 18.3302 19.1025 18.3302 19.1025C18.289 19.6088 18.6664 20.0528 19.1727 20.0941C19.679 20.1353 20.1235 19.7575 20.1647 19.2511C20.1647 19.2511 20.5635 14.3436 20.8201 11.1887C20.895 10.2621 20.5852 9.34591 19.9629 8.6554C19.34 7.9653 18.4611 7.56234 17.5318 7.54158L9.37047 7.35971C8.8629 7.34796 8.44083 7.75103 8.4295 8.25905C8.41861 8.76666 8.82127 9.18827 9.32929 9.19961L17.4906 9.38148C17.5462 9.38294 17.6016 9.387 17.6564 9.39408Z"
+                fill="currentColor"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_65_239">
+                <rect
+                  width="19.6343"
+                  height="19.6343"
+                  fill="white"
+                  transform="translate(0.128662 13.418) rotate(-42.5966)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+        </button>
                         </div>
                     </div>
                 </div>
