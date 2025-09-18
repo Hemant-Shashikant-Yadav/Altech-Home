@@ -48,22 +48,23 @@ export const ServiceItem = ({ text, delay, isLast }) => (
     </div>
 
     {/* Horizontal line */}
-    <div
-      style={{
-        width: "100%",
-        maxWidth: "clamp(20rem, 85vw, 36.5625rem)",
-        height: "clamp(0.08rem, 0.1vw + 0.06rem, 0.125rem)",
-        background: "#313131",
-        marginTop: "clamp(0.8rem, 1vw + 0.5rem, 1.19rem)",
-        marginBottom: "clamp(1rem, 1.2vw + 0.6rem, 1.31rem)",
-      }}
-    />
+    {!isLast && (
+      <div
+        style={{
+          width: "100%",
+          height: "clamp(0.08rem, 0.1vw + 0.06rem, 0.125rem)",
+          background: "#313131",
+          marginTop: "clamp(0.8rem, 1vw + 0.5rem, 1.19rem)",
+          marginBottom: "clamp(1rem, 1.2vw + 0.6rem, 1.31rem)",
+        }}
+      />
+    )}
   </motion.div>
 );
 
 const Section = ({ title, description, services, onLearnMoreClick }) => (
   <div
-    className="flex-shrink-0 w-full"
+    className="flex-shrink-0 w-full px-4 sm:px-6 md:px-[3.75rem]"
     style={{
       minHeight: "clamp(40rem, 15vw + 30rem, 50rem)",
       flexShrink: 0,
@@ -72,7 +73,7 @@ const Section = ({ title, description, services, onLearnMoreClick }) => (
       overflow: "visible",
     }}
   >
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-35 px-4 sm:px-6 md:px-8 lg:px-0">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
       {/* Left Column */}
       <motion.div
         initial={{ opacity: 0, y: -40 }}
@@ -118,18 +119,14 @@ const Section = ({ title, description, services, onLearnMoreClick }) => (
         </p>
 
         {/* Button */}
-        <motion.button
-          whileHover={{
-            backgroundColor: "#FFF",
-            color: "#000",
-            borderColor: "#000",
-          }}
-          whileTap={{ scale: 0.95 }}
+        <button
           onClick={onLearnMoreClick}
           className="
             group flex justify-center items-center 
             border-2 border-white bg-[#1B1B1B] text-white
-            transition-all duration-300 
+            hover:bg-white hover:text-black hover:border-black hover:scale-105
+            hover:shadow-[0_0_15px_rgba(255,255,255,0.5)]
+            active:scale-95
             focus:outline-none focus:ring-2 focus:ring-white
             cursor-pointer
           "
@@ -163,7 +160,7 @@ const Section = ({ title, description, services, onLearnMoreClick }) => (
             height="28"
             viewBox="0 0 28 28"
             fill="none"
-            className="transition-transform duration-300 group-hover:rotate-[42.597deg]"
+            className="group-hover:rotate-[42.597deg]"
             style={{
               width: "clamp(0.875rem, 1vw + 0.5rem, 1.22713rem)",
               height: "clamp(0.875rem, 1vw + 0.5rem, 1.22713rem)",
@@ -189,11 +186,13 @@ const Section = ({ title, description, services, onLearnMoreClick }) => (
               </clipPath>
             </defs>
           </svg>
-        </motion.button>
+        </button>
       </motion.div>
 
-      {/* Right Column */}
-      <div className="flex flex-col pt-0 lg:pt-[19.87rem] pb-20 lg:pb-32">
+      {/* Right Column - Aligned with navbar */}
+      <div 
+        className="flex flex-col pt-0 lg:pt-[19.87rem] pb-20 lg:pb-32"
+      >
         {services.map((service, index) => (
           <ServiceItem
             key={index}

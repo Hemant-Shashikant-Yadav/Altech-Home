@@ -1,25 +1,79 @@
-import React from 'react';
+import React from "react";
 
 const FocusResearchSection = () => (
-    <div className="bg-black shadow-lg">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 pb-10">
-            <div>
-                <h2 className="text-4xl font-bold text-white mb-4">Focus -</h2>
-                {/* Content for Focus section goes here */}
-            </div>
-            <div>
-                <h2 className="text-4xl font-bold text-white mb-4">Research</h2>
-                <ul className="text-gray-400 space-y-2">
-                    <li>Market Trends</li>
-                    <li>Competitive Analysis</li>
-                    <li>Business Insights</li>
-                    <li>Cybersecurity Audit</li>
-                    <li>Talent Mapping</li>
-                    <li>UX Auditing</li>
-                </ul>
-            </div>
+  <div className="bg-[#0B0B0B] py-16">
+    <div
+      className="max-w-[90rem] mx-auto"
+      style={{
+        paddingLeft: "clamp(1rem, 2vw + 0.5rem, 2rem)",
+        paddingRight: "clamp(1rem, 2vw + 0.5rem, 2rem)",
+      }}
+    >
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+        {/* Title */}
+        <div className="lg:col-span-1">
+          <h2
+            className="text-white font-montserrat"
+            style={{
+              fontSize: "clamp(1.5rem, 3vw + 0.8rem, 2.5rem)",
+              fontWeight: 600,
+              lineHeight: "normal",
+            }}
+          >
+            Focus -
+          </h2>
         </div>
+
+        {/* Right Grid */}
+        <div className="lg:col-span-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
+            {/* Research */}
+            <div className="flex flex-col">
+              <div
+                style={{ minHeight: "clamp(3rem, 4vw + 2rem, 4.5rem)" }}
+                className="flex items-start"
+              >
+                <h3
+                  className="text-white font-montserrat"
+                  style={{
+                    fontSize: "1.4rem",
+                    fontWeight: 500,
+                    lineHeight: "normal",
+                  }}
+                >
+                  Research
+                </h3>
+              </div>
+              <div className="mt-6">
+                <ul className="space-y-4">
+                  {[
+                    "Market Trends",
+                    "Competitive Analysis",
+                    "Business Insights",
+                    "Cybersecurity Audit",
+                    "Talent Mapping",
+                    "UX Auditing",
+                  ].map((item, idx) => (
+                    <li
+                      key={idx}
+                      className="text-gray-400 font-montserrat"
+                      style={{
+                        fontSize: "clamp(0.875rem, 1vw + 0.4rem, 1rem)",
+                        fontWeight: 400,
+                        lineHeight: "normal",
+                      }}
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 );
 
 export default FocusResearchSection;
