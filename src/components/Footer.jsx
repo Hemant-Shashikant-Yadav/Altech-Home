@@ -65,12 +65,12 @@ const Footer = () => {
     col1: [
       { name: "About", path: "/know-more" },
       { name: "Work", path: "/work" },
-      { name: "Careers", path: "/careers" }
+      { name: "Careers", path: "/careers" },
     ],
     col2: [
       { name: "Contact", path: "/collaboration" },
       { name: "Services", path: "/services" },
-      { name: "Clients", path: "/client" }
+      { name: "Clients", path: "/client" },
     ],
   };
 
@@ -252,145 +252,153 @@ const Footer = () => {
       </footer>
 
       {/* Desktop Footer */}
-      <footer
-        className="hidden lg:block w-full mx-auto px-[0.25rem] sm:px-[0.375rem] md:px-[3.75rem] h-[43.875rem] bg-black text-white"
-        style={{ fontFamily: "Montserrat, sans-serif" }}
-      >
-        <div className="flex flex-col items-center flex-shrink-0 h-full">
-          {/* Social Media Bar */}
-          <div
-            className="w-[17.75rem] h-[3rem] border border-white rounded-[3.125rem] bg-black flex justify-center items-center gap-[3.125rem] flex-shrink-0"
-            style={{ marginTop: "3rem" }}
-          >
-            <a
-              href="#"
-              aria-label="Our Google page"
-              className="hover:opacity-75 transition-opacity"
-            >
-              <img
-                src="/All Images Landing page Altecht/Google.png"
-                alt="Google"
-                className="w-[2.375rem] h-[2.375rem]"
-              />
-            </a>
-            <a
-              href="https://www.instagram.com/altecht_/"
-              aria-label="Our Instagram profile"
-              className="hover:opacity-75 transition-opacity"
-            >
-              <img
-                src="/All Images Landing page Altecht/Instagram.png"
-                alt="Instagram"
-                className="w-[2.375rem] h-[2.375rem]"
-              />
-            </a>
-            <a
-              href="https://www.linkedin.com/company/altecht/"
-              aria-label="Our LinkedIn profile"
-              className="hover:opacity-75 transition-opacity"
-            >
-              <img
-                src="/All Images Landing page Altecht/linkedin_svgrepo.com.svg"
-                alt="LinkedIn"
-                className="w-[2.375rem] h-[2.375rem]"
-              />
-            </a>
-          </div>
-
-          {/* Main Content */}
-          <div
-            className="flex-grow w-full flex justify-between"
-            style={{ marginTop: "6.375rem" }}
-          >
+      <div className={`w-full z-50 bg-black`}>
+        <footer
+          className="hidden lg:block w-full lg:max-w-[90rem] mx-auto px-2 sm:px-6 md:px-[3.75rem] max-w-[100vw] bg-black text-white"
+          style={{ fontFamily: "Montserrat, sans-serif" }}
+        >
+          <div className="flex flex-col items-center flex-shrink-0 h-full">
+            {/* Social Media Bar */}
             <div
-              className="flex justify-between items-start w-full"
-              style={{ gap: "5.625rem" }}
+              className="w-[17.75rem] h-[3rem] border border-white rounded-[3.125rem] bg-black flex justify-center items-center gap-[3.125rem] flex-shrink-0"
+              style={{ marginTop: "3rem" }}
             >
-              {/* Left: Links */}
+              <a
+                href="#"
+                aria-label="Our Google page"
+                className="hover:opacity-75 transition-opacity"
+              >
+                <img
+                  src="/All Images Landing page Altecht/Google.png"
+                  alt="Google"
+                  className="w-[2.375rem] h-[2.375rem]"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/altecht_/"
+                aria-label="Our Instagram profile"
+                className="hover:opacity-75 transition-opacity"
+              >
+                <img
+                  src="/All Images Landing page Altecht/Instagram.png"
+                  alt="Instagram"
+                  className="w-[2.375rem] h-[2.375rem]"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/altecht/"
+                aria-label="Our LinkedIn profile"
+                className="hover:opacity-75 transition-opacity"
+              >
+                <img
+                  src="/All Images Landing page Altecht/linkedin_svgrepo.com.svg"
+                  alt="LinkedIn"
+                  className="w-[2.375rem] h-[2.375rem]"
+                />
+              </a>
+            </div>
+
+            {/* Main Content */}
+            <div
+              className="flex-grow w-full flex justify-between"
+              style={{ marginTop: "6.375rem" }}
+            >
               <div
-                className="grid grid-cols-2 mt-[5rem]"
+                className="flex justify-between items-start w-full"
                 style={{ gap: "5.625rem" }}
               >
-                <div className="flex flex-col space-y-6">
-                  {navLinks.col1.map((link) => (
-                    <Link
-                      key={link.name}
-                      to={link.path}
-                      className="text-[1.5rem] font-medium leading-normal hover:opacity-75 transition-opacity"
-                      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                    >
-                      {link.name}
-                    </Link>
-                  ))}
+                {/* Left: Links */}
+                <div
+                  className="grid grid-cols-2 mt-[5rem]"
+                  style={{ gap: "5.625rem" }}
+                >
+                  <div className="flex flex-col space-y-6">
+                    {navLinks.col1.map((link) => (
+                      <Link
+                        key={link.name}
+                        to={link.path}
+                        className="text-[1.5rem] font-medium leading-normal hover:opacity-75 transition-opacity"
+                        onClick={() =>
+                          window.scrollTo({ top: 0, behavior: "smooth" })
+                        }
+                      >
+                        {link.name}
+                      </Link>
+                    ))}
+                  </div>
+                  <div className="flex flex-col space-y-6">
+                    {navLinks.col2.map((link) => (
+                      <Link
+                        key={link.name}
+                        to={link.path}
+                        className="text-[1.5rem] font-medium leading-normal hover:opacity-75 transition-opacity"
+                        onClick={() =>
+                          window.scrollTo({ top: 0, behavior: "smooth" })
+                        }
+                      >
+                        {link.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-                <div className="flex flex-col space-y-6">
-                  {navLinks.col2.map((link) => (
-                    <Link
-                      key={link.name}
-                      to={link.path}
-                      className="text-[1.5rem] font-medium leading-normal hover:opacity-75 transition-opacity"
-                      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                    >
-                      {link.name}
-                    </Link>
-                  ))}
+
+                {/* Right: Email & Button */}
+                <div className="flex items-end flex-col">
+                  <h2 className="text-[4rem] font-medium leading-normal whitespace-nowrap">
+                    Hello@Altecht.com
+                  </h2>
+                  <button aria-label="Send email">
+                    <EmailArrowButton />
+                  </button>
                 </div>
               </div>
+            </div>
 
-              {/* Right: Email & Button */}
-              <div className="flex items-end flex-col">
-                <h2 className="text-[4rem] font-medium leading-normal whitespace-nowrap">
-                  Hello@Altecht.com
-                </h2>
-                <button aria-label="Send email">
-                  <EmailArrowButton />
+            {/* Bottom Bar */}
+            <div
+              className="w-full relative h-[4.3125rem]"
+              style={{ marginTop: "11rem", marginBottom: "1.44rem" }}
+            >
+              {/* Left: Enquiry */}
+              <div
+                className="flex items-center absolute left-0 bottom-0"
+                style={{ gap: "0.56rem", marginTop: "1.88rem" }}
+              >
+                <img
+                  src="/All Images Landing page Altecht/Phone.png"
+                  alt="Phone"
+                  className="w-[2.5rem] h-[2.5rem]"
+                />
+                <span className="text-[1.5rem] font-medium leading-normal">
+                  Enquiry: 956-167-6342
+                </span>
+              </div>
+
+              {/* Center: Up Arrow - Absolutely centered */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 top-0 ">
+                <button
+                  aria-label="Scroll to top"
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
+                >
+                  <UpArrowButton />
                 </button>
               </div>
-            </div>
-          </div>
 
-          {/* Bottom Bar */}
-          <div
-            className="w-full relative h-[4.3125rem]"
-            style={{ marginTop: "11rem", marginBottom: "1.44rem" }}
-          >
-            {/* Left: Enquiry */}
-            <div
-              className="flex items-center absolute left-0 bottom-0"
-              style={{ gap: "0.56rem", marginTop: "1.88rem" }}
-            >
-              <img
-                src="/All Images Landing page Altecht/Phone.png"
-                alt="Phone"
-                className="w-[2.5rem] h-[2.5rem]"
-              />
-              <span className="text-[1.5rem] font-medium leading-normal">
-                Enquiry: 956-167-6342
-              </span>
-            </div>
-
-            {/* Center: Up Arrow - Absolutely centered */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 top-0">
-              <button
-                aria-label="Scroll to top"
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              {/* Right: Links & Copyright */}
+              <div
+                className="flex text-sm font-light text-right absolute right-0 bottom-0"
+                style={{ gap: "1.37rem" }}
               >
-                <UpArrowButton />
-              </button>
-            </div>
-
-            {/* Right: Links & Copyright */}
-            <div
-              className="flex text-sm font-light text-right absolute right-0 bottom-0"
-              style={{ gap: "1.37rem" }}
-            >
-              <a href="#">Privacy Policy</a>
-              <a href="#">SiteMap</a>
-              <span>@2025, Altecht. All Rights Reserved.</span>
+                <a href="#">Privacy Policy</a>
+                <a href="#">SiteMap</a>
+                <span>@2025, Altecht. All Rights Reserved.</span>
+              </div>
             </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </>
   );
 };
