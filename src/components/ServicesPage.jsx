@@ -135,7 +135,7 @@ const ServicesPage = () => {
           switch to side-by-side only at xl (>=1280px) */}
       <div className="flex flex-col xl:flex-row xl:items-stretch justify-between isolate">
         {/* Cybersecurity card (separate left column when xl, otherwise stacks) */}
-        <div className="flex justify-center xl:self-end mb-8 sm:mb-10 md:mb-12 lg:mb-16 xl:mb-0 p-8">
+        <div className="flex justify-center xl:self-end mb-8 sm:mb-10 md:mb-12 lg:mb-16 xl:mb-0 ">
           <div
             className="relative flex flex-col items-center bg-white transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
             style={{
